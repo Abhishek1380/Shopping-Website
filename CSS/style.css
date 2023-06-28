@@ -118,10 +118,10 @@ navbar span i {
 }
 
 
-/* h6 {
+h6 {
     font-size: 12px;
 
-} */
+}
 
 hr {
     line: #878787;
@@ -129,7 +129,7 @@ hr {
 
 
 /* Buttons */
-.btn-r {
+/* .btn-r {
     font-size: 18px;
     border: none;
     outline: none;
@@ -138,7 +138,7 @@ hr {
     padding: 5px 10px;
     font-weight: 700;
     cursor: pointer;
-}
+} */
 
 .btn-rounded-r {
     border-radius: 3px;
