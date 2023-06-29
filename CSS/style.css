@@ -46,28 +46,28 @@ img {
 
 /* Navigation Bar */
 
-.navbar {
+.navbarr {
     height: 60px;
     background: var(--primary-color);
 }
 
-.nav span {
+.navv span {
     color: #ffc200;
 }
 
-.nav {
+.navv {
     max-width: 95%;
     margin-left: 140px;
     margin-right: 40px;
     display: flex;
 }
 
-.navbar img {
+.navbarr img {
 
     cursor: pointer;
 }
 
-.nav-1 {
+.navv-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,7 +76,7 @@ img {
     margin: auto 24px;
 }
 
-.nav-2 {
+.navv-2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +84,7 @@ img {
 
 }
 
-.nav-3 {
+.navv-3 {
     width: 51px;
     display: flex;
     place-items: center;
@@ -103,7 +103,7 @@ input {
 
 }
 
-navbar span {
+navbarr span {
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -111,7 +111,7 @@ navbar span {
 
 }
 
-navbar span i {
+navbarr span i {
     line-height: 39px;
 
     margin-left: 13px;
