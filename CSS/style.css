@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    background-color: #f1f3f6;
+    background-color: #e9e6ea;
+}
+
+/* #f1f3f6 */
+body {
+    background: #282222;
     font-family: inter_semi_bold, fallback-inter_semi_bold, Arial, sans-serif;
 }
 
@@ -203,4 +209,50 @@ hr {
 
 textarea {
     font-family: inter_regular, fallback-inter_regular, Arial, sans-serif;
+}
+
+/* Section 2 */
+.showcase {
+    background: var(--White);
+    width: 95%;
+    margin: auto;
+    /* background: #6c757d; */
+}
+
+.showcase-top {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    margin-top: 7px;
+    margin-left: 37px;
+}
+
+.showcase-top img {
+    width: 4em;
+    /* margin: 10px 15px; */
+}
+
+.showcase-top p {
+    font-weight: 600;
+}
+
+.con {
+    margin: 10px 30px;
+    cursor: pointer;
+
+}
+
+.con:hover {
+
+    color: var(--primary-color);
+}
+
+.img img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.top-img img {
+    margin-bottom: 14px;
+    border-radius: 10px;
 }
