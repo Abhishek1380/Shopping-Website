@@ -12,6 +12,7 @@ body {
 :root {
     --primary-color: #2874f0;
     --White: #fff;
+    --bs-gray: #6c757d;
 }
 
 a {
@@ -58,10 +59,10 @@ img {
 
 .Nav {
 
-    margin-left: 140px;
+    margin-left: 65px;
 
     display: flex;
-    width: 1286px;
+    width: 1339px;
 }
 
 .Navbar img {
@@ -74,29 +75,46 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 79px;
+    /* width: 79px; */
     margin: auto 24px;
+    width: 7%;
+}
+
+.Nav-1-1 {
+    margin-top: 5px;
 }
 
 .Nav-2 {
-    display: flex;
+    /* width: 880px; */
     align-items: center;
     justify-content: center;
+    width: 50%;
+    margin: auto 6px;
+}
 
-
+.search-input {
+    display: flex;
+    margin-top: 8px
 }
 
 .Nav-3 {
-    width: 418px;
+    /* width: 418px; */
     display: flex;
     place-items: center;
     /* flex-direction: column; */
-    gap: 5px;
+    gap: 40px;
+    width: 35%;
+    margin-left: 5%;
+
+}
+
+.Nav-3 a {
+    color: var(--White);
 }
 
 input {
     width: 44em;
-    height: 34px;
+    height: 40px;
     padding: 5px 7px;
     font-size: 15px;
     margin: 12px 0px;
@@ -104,6 +122,7 @@ input {
     font-weight: 600;
     overflow: hidden;
     outline: none;
+    border-radius: 0px 12px 12px 0px;
     /* background: transparent; */
 }
 
@@ -111,8 +130,10 @@ input {
 
     font-size: 31px;
     padding: 2px 10px;
-
+    background: var(--White);
     border-right: none;
+    border-radius: 12px 0px 0px 12px;
+    color: #979797;
 }
 
 
@@ -166,8 +187,20 @@ hr {
     /* margin-right: 15px;*/
 }
 
-Nav .fa {}
+.Nav-3 a {
+    text-decoration: none;
+}
 
 .links {
     width: 100%;
+    font-size: 19px;
+
+}
+
+.icon-margin {
+    margin-right: 5px;
+}
+
+textarea {
+    font-family: inter_regular, fallback-inter_regular, Arial, sans-serif;
 }
