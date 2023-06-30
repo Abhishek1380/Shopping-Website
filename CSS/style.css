@@ -264,3 +264,7 @@ textarea {
     padding: 5px 10px;
     background-color: #e9e6ea;
 }
+
+.carousel-inner {
+    width: 100%;
+}
