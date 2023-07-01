@@ -284,6 +284,7 @@ textarea {
     background: #172337;
     height: 48vh;
     margin-top: 22px;
+    width: 100%;
 }
 
 .section-1 {
