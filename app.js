@@ -17,8 +17,69 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.send("Hii, I'm from express server");
 });
+
+
+app.get('/location', async (req, res) => {
+    let query{ };
+    let collection = 'location';
+    let output = await getData(collection, query);
+    res.send(output);
+})
+
+app.get('/mealtype', async (req, res) => {
+    let query = {};
+    let collection = 'mealtypes';
+    let output = await (collection, query);
+    res.send(output);
+});
+
+app.get('/restaurants', async (req, res) => {
+    let query = {};
+    if (req.query.state_id && req.query.meal_id) {
+        query = { stateid: Number(req.query.stateId), "mealTypes.meal_id": Number(req.query.mealId) }
+    }
+    else if (req.query.stateId) {
+        query = {
+            state_id: Number(req.query.stateId)
+        }
+    }
+    else if (req.query.mealId) {
+        query = {
+            mealtypes.mealId = Number(req.query.mealId);
+        }
+    } else {
+        query = {};
+
+    }
+    let collection = "restaurants";
+    let output = await getData(collection, query);
+    res.send(output)
+})
+
+app.get('./menu/:id', async (req, res) => {
+    let id = Number(req.params.id);
+
+    let query = { restaurant_id: id };
+    let collection = 'menu';
+    let output = await getData(collection, query);
+    res.send(output);
+})
+
+app.get('./orders', async (req, res) => {
+    let query = {};
+    if (req.query.email) {
+        query = { email: req.query.email }
+    } else {
+        query = {};
+    }
+    let collection = 'orders';
+    let output = await getData(collection, query);
+    res.send(output);
+})
+
+
 app.listen((port) => {
-    dbConnect()
+    // dbConnect()
     // try {
     console.log(`server running on port ${port}`);
     // } catch (err) {
