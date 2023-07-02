@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 const url = 'mongodb://localhost:27017';
 const dbName = 'mydatabase';
 
-const connectToMongoDB = async () => {
+const dbConnect = async () => {
     try {
         const client = await MongoClient.connect(url, {
             useNewUrlParser: true,
@@ -18,4 +18,4 @@ const connectToMongoDB = async () => {
     }
 };
 
-module.exports = dbController;
+module.exports = dbConnect;
