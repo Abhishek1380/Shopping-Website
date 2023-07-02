@@ -77,6 +77,43 @@ app.get('./orders', async (req, res) => {
     res.send(output);
 })
 
+app.post('/placeorders', async (req, res) => {
+    let data = req.body;
+    let collection = 'orders';
+    console.log(">>>", data);
+    let output = await getData(collection, data);
+})
+
+app.post('/menuDetails', async (req, res) => {
+    if (Array.isArray(req.body.id)) {
+        let query = { menu_id: { $in: req.body.id } };
+        let collection = 'menu';
+        let output = await getdata(collection, data);
+        res.send(output);
+
+    } else {
+        res.send("Please enter the data in array format");
+    }
+})
+
+app.put('/updateOrder', async (req, res) => {
+    let collection = 'orders';
+    let condition = { '_id': new Mongo.Object(req.body._id) }
+    let data = {
+        $set: {
+            "status": req.body.status
+        }
+    }
+    let output = await updateOrder(collection, condition, data);
+    res.send(output);
+})
+
+app.delete('/deleteorder', async (req, res) => {
+    let collection = 'order';
+    let condition = { "_id": new Mongo.ObjectId(req.body.id) }
+    let output = await getData(collection, condition);
+    res.send(output);
+})
 
 app.listen((port) => {
     // dbConnect()
