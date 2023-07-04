@@ -44,8 +44,10 @@
 
         </div>
     </header> -->
+    <!-- Portion that will be used -->
 
 
+    <!-- Portion that will be used -->
     <header class="Navbar">
         <div class="Nav">
             <div class="Nav-1">
@@ -137,8 +139,26 @@
         </div>
     </div>
 
+
     <div class="showcase-mid">
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div id="coupon">
+                <div>
+                    <button class="coicon" onclick="closeCoupon()">&times</button>
+                </div>
+                <div class="cobox">
+                    <div class="cobox-1">
+                        <img src="https://i.ibb.co/9qmqpbt/Uber.jpg" alt="Uber_logo" border="0">
+                        <p class="center">20% off on all the sides within the city By using HDFC bank</p>
+                        <div class="cobutton">
+                            <button class="btn-co-1">StealDeal</button>
+                            <button class="btn-co-2">Copy Code</button>
+                        </div>
+                        <p class="font-sl">Valid till 20 Dec,2023</p>
+                    </div>
+                </div>
+
+            </div>
 
             <!-- Indicators/dots -->
             <div class="carousel-indicators">
@@ -290,4 +310,7 @@
 
 
     </div>
+    <script src="script.js">
+        window.onload = loadCoupon()
+    </script>
 </body>
