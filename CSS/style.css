@@ -73,10 +73,13 @@ hr {
 
 .Nav {
 
-    margin-left: 65px;
-
+    /* margin-left: 65px; */
     display: flex;
-    width: 1339px;
+    width: 100%;
+    /* padding-right: 30px; */
+    /* padding-right: 30px; */
+    padding-left: 65px;
+    padding-right: 20px;
 }
 
 .Navbar img {
@@ -102,8 +105,9 @@ hr {
     /* width: 880px; */
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 45%;
     margin: auto 6px;
+    /* margin-right: 5%; */
 }
 
 .search-input {
@@ -116,9 +120,9 @@ hr {
     display: flex;
     place-items: center;
     /* flex-direction: column; */
-    gap: 40px;
-    width: 35%;
-    margin-left: 5%;
+    gap: 32px;
+    width: 45%;
+    margin-left: 30px;
 
 }
 
@@ -183,6 +187,7 @@ hr {
 .links {
     width: 100%;
     font-size: 19px;
+    padding: 0px 5px;
 
 }
 
@@ -194,6 +199,34 @@ textarea {
     font-size: 23px;
     color: var(--White);
     /* margin-right: 15px;*/
+}
+
+@media (max-width: 1239px) {
+    .links a {
+        visibility: collapse;
+    }
+
+    .links .visible {
+        visibility: visible;
+        padding-top: 30px;
+    }
+
+    .Nav-1 {
+        margin: 5px 25px;
+        width: 7%;
+        margin-top: -5px;
+    }
+
+    .Nav-2 {
+
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 1004) {
+    .Nav-1 {
+        padding-top: -35px;
+    }
 }
 
 /* Buttons */
@@ -225,14 +258,16 @@ textarea {
 /* Section 2 */
 .showcase {
     background: var(--White);
-    width: 95%;
+    /* min-width: 95%; */
+    /* width: 95%; */
     margin: auto;
+    overflow-x: auto;
     /* background: #6c757d; */
 }
 
 .showcase-top {
     display: flex;
-    width: 95%;
+    /* width: 95%; */
     margin: auto;
     margin-top: 7px;
     margin-left: 37px;
