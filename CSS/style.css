@@ -209,13 +209,13 @@ textarea {
 
     .links .visible {
         visibility: visible;
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
     .Nav-1 {
         margin: 5px 25px;
         width: 7%;
-        margin-top: -5px;
+        margin-top: 1px;
     }
 
     .Nav-2 {
@@ -226,7 +226,7 @@ textarea {
 
 @media (max-width: 1004) {
     .Nav-1 {
-        padding-top: -35px;
+        padding-top: 22px;
     }
 }
 
