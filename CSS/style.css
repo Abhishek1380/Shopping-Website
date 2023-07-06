@@ -178,6 +178,7 @@ h6 {
 
 hr {
     line: #878787;
+
 }
 
 .Nav-3 a {
@@ -320,13 +321,15 @@ textarea {
 
 .footer {
     background: #172337;
-    height: 48vh;
+    height: 59vh;
     margin-top: 22px;
     width: 100%;
+    margin-bottom: 12vh;
 }
 
 .section-1 {
     display: flex;
+    padding-top: 30px;
 }
 
 
@@ -335,7 +338,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
-    height: 35vh;
+    height: 39vh;
     /* width: 57%; */
 }
 
@@ -439,32 +442,17 @@ textarea {
 @media (max-width: 1254px) {
     .sec-1 {
         grid-template-columns: repeat(3, 1fr);
-        height: 56vh;
+        height: 68vh;
     }
 
     .footer {
-        height: 69vh;
+        height: 88vh;
     }
 
     .sec-222 {
         margin-left: 1%;
     }
 
-}
-
-@media (max-width: 1024px) {
-    .sec-1 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .section-1 {
-        height: 65vh;
-    }
-
-
-    .sec-222 {
-        margin-left: 1%;
-    }
 }
 
 @media (max-width: 1078px) {
@@ -482,7 +470,7 @@ textarea {
     }
 
     .footer {
-        height: 91vh;
+        height: 97vh;
     }
 
     .fot-2 {
@@ -491,18 +479,45 @@ textarea {
 }
 
 
+@media (max-width: 1024px) {
+    .footer {
+        height: 115vh;
+    }
+
+    .sec-1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-1 {
+        height: 85vh;
+    }
+
+
+    .sec-222 {
+        margin-left: 1%;
+    }
+}
+
+
+
 @media (max-width: 863px) {
 
     .section-1 {
         flex-direction: column;
+        height: 117vh;
     }
 
     .sec-1 {
         grid-template-columns: repeat(4, 1fr);
+        height: 83vh;
     }
 
     .sec-2 {
         width: 63%;
+    }
+
+    .footer {
+        height: 142vh;
     }
 
 
@@ -511,26 +526,27 @@ textarea {
 @media (max-width: 838px) {
     .sec-1 {
         grid-template-columns: repeat(2, 1fr);
-        height: 63vh;
+        height: 90vh;
     }
 
     .section-1 {
-        height: 93vh;
+        height: 160vh;
     }
 
     .footer {
-        height: 119vh;
+        height: 149vh;
     }
 
     .sec-2 {
         width: 79%;
         padding-left: 10%;
+        height: 40vh;
     }
 }
 
 @media (max-width: 561px) {
     .section-1 {
-        height: 105vh;
+        height: 130vh;
     }
 
     .sec-2 {
@@ -538,7 +554,7 @@ textarea {
     }
 
     .footer {
-        height: 132vh;
+        height: 158vh;
     }
 
 
