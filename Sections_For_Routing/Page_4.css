@@ -1,68 +1,87 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    background-color: #e9e6ea;
-}
-
-/* #f1f3f6 */
-body {
-    background: #282222;
-    font-family: inter_semi_bold, fallback-inter_semi_bold, Arial, sans-serif;
+img {
+    width: 95%;
+    padding-top: 16px;
+    padding-left: 21%;
 }
 
 :root {
-    --primary-color: #2874f0;
-    --White: #fff;
-    --bs-gray: #6c757d;
+    --yellowish-orange: #ff9f00;
 }
 
-a {
-    text-decoration: none;
+.img_sec {
+    width: 50%;
+    height: 38vh;
+    text-align: center;
 }
 
-ul {
-    list-style: none;
+.detail_section_1_1 {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-li a {
-    text-decoration: none;
-    width: 50px;
-    margin: 20px;
-    font-size: 17px;
-    color: #fff;
-    font-weight: 700;
-}
-
-
-
-img {
     width: 100%;
+    margin: auto;
+    height: 51vh;
+    border: 2px solid #a39e9e;
 }
 
-.myDark {
-    background: #000;
+.detail_sec_1 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    /* background-color: aqua; */
+}
+
+.detail_sec_2 {
+
+    width: 50%;
+    /* background-color: rgb(63, 107, 107); */
+}
+
+.detail_sec_2_1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12%;
+
+}
+
+.img_sec {
+    width: 82%;
+}
+
+.buy-btn {
+    display: flex;
+    gap: 10px;
+    margin-left: 18%;
+}
+
+.order_btn,
+.order_btn_1 {
+    font-size: 18px;
+    padding: 20px 36px;
+    background-color: var(--yellowish-orange);
     color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: Roboto, Arial, sans-serif;
+    cursor: pointer;
+
 }
 
-hr {
-    margin: 1rem 0;
-    color: #fff;
-    border: 0;
-    border-top: solid;
-    opacity: 0.7;
+.order_btn_1 {
+    background-color: #fb641b;
 }
 
-hr {
-    border-top: 9px solid #d4d3d3;
+.desc {
+    font-size: 2.1rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.price {
+    font-size: 25px;
+    margin: 0;
+}
+
+.scrach {
+    margin: 2px 0px;
 }
 
 /* Box CSS */
@@ -193,7 +212,13 @@ hr {
 }
 
 .fashion_section_2 {
+
+    width: 98%;
     padding-bottom: 2rem;
+    border: 1px solid #4c4b4b;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 .fashion_sec_1 {
