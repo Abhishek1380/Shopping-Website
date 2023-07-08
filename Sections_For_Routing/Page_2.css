@@ -184,8 +184,10 @@ hr {
     margin-top: 2rem;
 }
 
-.fashion_section_1 {
-    width: 98%;
+.fashion_section_1 button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
 
 }
 
@@ -199,4 +201,26 @@ hr {
 
 .img-m {
     width: 40%;
+}
+
+.mydark {
+    background-color: black;
+    color: white
+}
+
+/* Responsive Css */
+@media (max-width: 863px) {
+    .fashion_sec_1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 660px) {
+    .fashion_sec_1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box-1 {
+        height: 63vh;
+    }
 }

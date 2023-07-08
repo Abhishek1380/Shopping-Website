@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Page_2.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -17,6 +17,7 @@
     <div class="fashion_section_1">
         <h2>Best of Electronics</h2>
         <p>9 Items</p>
+        <button class="	fa fa-minus-circle" onclick="changeMode()"></button>
     </div>
     <hr>
     <div class="fashion_section_2">
@@ -128,7 +129,12 @@
 
 
 
-
+    <script>
+        function changeMode() {
+            let mybody = document.body;
+            mybody.classList.toggle('mydark')
+        }
+    </script>
 
 </body>
 
