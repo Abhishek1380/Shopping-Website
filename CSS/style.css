@@ -228,6 +228,22 @@ textarea {
     .Nav-1 {
         padding-top: 22px;
     }
+
+    .links {
+        padding-top: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .links {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 871px) {
+    .search-input {
+        visibility: inherit;
+    }
 }
 
 /* Buttons */
@@ -815,3 +831,6 @@ textarea {
 .s-1 a {
     color: #fff;
 }
+
+
+/* Fashion page Css */
