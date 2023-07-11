@@ -1,26 +1,18 @@
 [
     {
-        "id": 1,
-        "name": "Electronics",
-        "description": "Explore a wide range of electronics products, including smartphones, laptops, televisions, and more.",
-        "image": "electronics.jpg"
+        "category_id": 1,
+        "name": "Electronics"
     },
     {
-        "id": 2,
-        "name": "Fashion",
-        "description": "Discover the latest fashion trends in clothing, shoes, accessories, and more.",
-        "image": "fashion.jpg"
+        "category_id": 1,
+        "name": "Top Deals"
     },
     {
-        "id": 3,
-        "name": "Home & Furniture",
-        "description": "Furnish your home with stylish furniture, decor, kitchen appliances, and more.",
-        "image": "home_furniture.jpg"
+        "category_id": 1,
+        "name": "Fashion"
     },
     {
-        "id": 4,
-        "name": "Books",
-        "description": "Get lost in the world of books with a vast collection of novels, bestsellers, self-help books, and more.",
-        "image": "books.jpg"
+        "category_id": 1,
+        "name": "Books"
     }
 ]
