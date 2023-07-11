@@ -22,41 +22,5 @@
         "name": "Books",
         "description": "Get lost in the world of books with a vast collection of novels, bestsellers, self-help books, and more.",
         "image": "books.jpg"
-    },
-    {
-        "id": 5,
-        "name": "Beauty & Personal Care",
-        "description": "Take care of yourself with a wide range of beauty and personal care products, including skincare, haircare, and cosmetics.",
-        "image": "beauty.jpg"
-    },
-    {
-        "id": 6,
-        "name": "Sports & Fitness",
-        "description": "Stay active and fit with sports equipment, fitness accessories, sportswear, and more.",
-        "image": "sports.jpg"
-    },
-    {
-        "id": 7,
-        "name": "Toys & Games",
-        "description": "Entertain kids of all ages with an extensive collection of toys, games, puzzles, and more.",
-        "image": "toys_games.jpg"
-    },
-    {
-        "id": 8,
-        "name": "Appliances",
-        "description": "Discover a range of home appliances, including refrigerators, washing machines, air conditioners, and more.",
-        "image": "appliances.jpg"
-    },
-    {
-        "id": 9,
-        "name": "Jewelry",
-        "description": "Adorn yourself with stunning jewelry pieces, including earrings, necklaces, bracelets, and more.",
-        "image": "jewelry.jpg"
-    },
-    {
-        "id": 10,
-        "name": "Automotive",
-        "description": "Find automotive products and accessories for your vehicle, including car parts, tools, and car care essentials.",
-        "image": "automotive.jpg"
     }
 ]

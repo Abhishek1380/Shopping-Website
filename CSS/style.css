@@ -242,7 +242,7 @@ textarea {
 
 @media (max-width: 871px) {
     .search-input {
-        visibility: inherit;
+        display: none;
     }
 }
 
@@ -726,7 +726,7 @@ textarea {
 
 /* Box-css */
 .box {
-    height: 45vh;
+    height: 60vh;
     display: flex;
     margin-left: 20%;
     /* width: 98%; */
@@ -738,8 +738,8 @@ textarea {
 }
 
 .box-2 {
-    /* width: 270px; */
-    height: 40vh;
+    width: 270px;
+    height: 56vh;
     /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
@@ -756,8 +756,9 @@ textarea {
 
 .box-1 {
     /* width: 270px; */
-    height: 40vh;
+    height: 57vh;
     /* border: 2px solid red; */
+    width: 270px;
     display: flex;
     flex-direction: column;
     justify-content: center;
