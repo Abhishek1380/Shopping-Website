@@ -177,3 +177,80 @@
 .carousel-inner {
     width: 100%;
 }
+
+
+/* Coupon */
+#coupon {
+    width: 44%;
+    height: 48vh;
+    position: absolute;
+    background: linear-gradient(90.4deg, rgb(248, 52, 246) 0.6%, rgb(152, 38, 252) 90%);
+    top: -81px;
+    left: 28%;
+    z-index: 15;
+    display: flex;
+}
+
+#coupon img {
+    width: 132px;
+    height: 132px;
+}
+
+#coupon .coicon {
+    width: 1.8em;
+    height: 1.8em;
+    font-size: 22px;
+}
+
+#coupon button {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+#coupon p {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.cobox {
+    width: 80%;
+    height: 43vh;
+    background: linear-gradient(90.4deg, rgb(248, 52, 246) 0.6%, rgb(152, 38, 252) 90%);
+    margin: auto;
+}
+
+#coupon .font-sl {
+    font-size: 16px;
+    line-height: 2em;
+}
+
+.cobutton {
+    display: flex;
+}
+
+.cobox-1 {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    height: 38vh;
+    padding: 30px;
+}
+
+.btn-co-1 {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-co-2 {
+    background-color: #fff;
+    color: rebeccapurple;
+}
+
+.coicon {
+    cursor: pointer;
+}

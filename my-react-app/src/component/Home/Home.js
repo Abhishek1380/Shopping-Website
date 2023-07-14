@@ -1,6 +1,7 @@
 import React from "react";
 import ShowcaseTop from "./showcaseTop";
 import ShowcaseMid from "./ShowcaseMid";
+import WebDesc from "./WebDesc";
 // import Header from '../Header';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
             {/* <Header /> */}
             <ShowcaseTop />
             <ShowcaseMid />
+            <WebDesc />
         </>
     )
 }
