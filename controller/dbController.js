@@ -1,21 +1,45 @@
+const mongodb = require('mongodb');
 const { MongoClient } = require('mongodb');
+const url = "mongodb://127.0.0.1:27017/4000";
+// Live cloud link
+// mongodb+srv://Abhishek91:T4gXJw0Gy2YKNkDL@atlascluster.0jb1kvd.mongodb.net/?retryWrites=true&w=majority
 
-const url = 'mongodb://localhost:27017';
-const dbName = 'mydatabase';
+const client = new MongoClient(url);
 
-const dbConnect = async () => {
+async function dbConnect() {
+    await client.connect();
+}
+
+async function getData(colName, query) {
+    let output = [];
     try {
-        const client = await MongoClient.connect(url, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log('Connected successfully to MongoDB');
-        const db = client.db(dbName);
-        return db;
-    } catch (error) {
-        console.error('Error connecting to MongoDB:', error);
-        throw error;
+        const cursor = db.collection(colName).find(query);
+        for await (const data of cursor) {
+            output.push(data);
+        }
+        cursor.closed
+    } catch (err) {
+        output.push({ "Error": "Error in getting data" });
     }
-};
+    return output;
+}
+async function postData(colName, data) {
+    let output;
+    try {
+        db.collection(colName).insertOne(data);
+        output = { "response": "Data added successfully" };
+    } catch (err) {
+        output = { "response": "Error in sending data" };
+        return output;
+    }
+}
 
-module.exports = dbConnect;
+const db = client.db("Company");
+
+
+module.exports = {
+    dbConnect,
+    db,
+    getData,
+    postData
+};
