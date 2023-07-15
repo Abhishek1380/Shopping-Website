@@ -1,7 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 
+const base_url = "http://127.0.0.1:6001";
+
 const Header = () => {
+
+
+    const [location, setLocation] = useState('test');
+    // const [resData, setResData] = useState('test');
+
+    // useEffect(() => {
+    //     fetch(`${base_url}/location`, { method: 'GET' })
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             setLocation(data);
+    //             console.log(location);
+    //         })
+    // }, [])
+    useEffect(() => {
+        fetch(`${base_url}/location`, { method: 'GET' })
+            .then((res) => res.json())
+            .then((data) => {
+                setLocation(data);
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+            });
+    }, []);
+
+    const renderItem = (data) => {
+        if (data) {
+            return data.map((item) => {
+                return (
+                    <option key={item.id} value={item.state_id}>
+                        {item.state}
+                    </option>
+                )
+            })
+        }
+    }
+    // const handleCity = (event) => {
+    //     console.log(event.target.value);
+    //     let state_id = event.target.value;
+    //     fetch(`${base_url}/resturant?stateId=${state_id}`, { method: 'GET' })
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             setResData(data);
+    //         })
+
+    // }
+
+
     return (
         <>
             <header className="Navbar">
