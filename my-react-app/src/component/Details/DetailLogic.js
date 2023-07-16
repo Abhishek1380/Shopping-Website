@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
-import './Listing.css';
-import ListingDisplay from './ListingDisplay'
+import './detail.css';
+import DetailDisplay from './DetailDisplay'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const base_url = "http://127.0.0.1:6003";
 
-const ListingLogic = () => {
+const DetailLogic = () => {
 
     let params = useParams();
-    const [restList, setRestList] = useState();
+    const [restDetails, setrestDetails] = useState();
 
     useEffect(() => {
-        let categoryId = params.category_id;
-        axios.get(`${base_url}/products_list_1?category_id=${categoryId}`)
+        let P_id = params.p_id;
+        axios.get(`${base_url}/products_list_1?p_id=${P_id}`)
             .then((res) => {
-                setRestList(res.data);
+                setrestDetails(res.data[1]);
+                console.log(res.data);
             })
+
     }, [])
     // }, [])
 
@@ -30,8 +33,8 @@ const ListingLogic = () => {
             </div>
 
             <hr /> */}
-            <ListingDisplay listData={restList} />
+            <DetailDisplay listData1={restDetails} />
         </>
     )
 }
-export default ListingLogic;
+export default DetailLogic;

@@ -1,0 +1,49 @@
+.detail {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    height: 67vh;
+}
+
+img {
+    width: 100%;
+}
+
+.div_img {
+    width: 87%;
+    height: 50vh;
+    margin: auto;
+    padding: 8px;
+}
+
+.detail_1 {
+    width: 40%;
+    /* background-color: aquamarine; */
+    background-color: #fff;
+}
+
+.detail_2 {
+    width: 60%;
+    background-color: aliceblue;
+    line-height: 2rem;
+}
+
+.rating {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.specs {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+}
+
+.btn-detail {
+    font-size: 20px;
+    padding: 10px 40px;
+    background-color: #19845324;
+    border-radius: 14px;
+    font-family: sans-serif;
+    cursor: pointer;
+}

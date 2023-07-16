@@ -5,24 +5,40 @@ import Footer from './Footer';
 import Home from './Home/Home';
 import Main from './Main';
 import ListingLogic from './ListingPage/ListingLogic';
-import ListingDisplay from './ListingPage/ListingDisplay';
+import DetailLogic from './Details/DetailLogic';
+
 
 const Routing = () => {
     return (
         <>
             <BrowserRouter>
-                <Header />
+                {/* <Header /> */}
+                {/* <Routes> */}
+                {/* <Route path="/" element={<Main />}>
+                        <Route index element={<Home />} />
+                        <Route path="Home" element={<Home />} /> */}
+
+                {/* <Route path="ListingPage/:category_id" element={<ListingLogic />} /> */}
+                {/* <Route path="ListingPage/ListingLogic" element={<ListingLogic />} /> */}
+
+                {/* </Routes> */}
+
+                {/* <Footer /> */}
+                {/* <ListingLogic /> */}
+                {/* <ListingLogic /> */}
+                {/* <Header />
                 <Routes>
                     <Route path="/" element={<Main />}>
                         <Route index element={<Home />} />
                         <Route path="Home" element={<Home />} />
-                        <Route path="ListingPage/:p_Id" element={<ListingDisplay />} />
-                        <Route path="ListingPage/:p_Id" element={<ListingLogic />} />
+                        <Route path="details" element={<DetailDisplay />} />
                     </Route>
                 </Routes>
-
-                <Footer />
-            </BrowserRouter>
+                <Footer /> */}
+                {/* <Header /> */}
+                <DetailLogic />
+                {/* <Footer /> */}
+            </BrowserRouter >
 
         </>
     )

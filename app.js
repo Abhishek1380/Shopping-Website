@@ -24,12 +24,46 @@ app.get('/', (req, res) => {
     console.log('Message sent');
 })
 
+app.get('/location', async (req, res) => {
+    let query = {};
+    let collection = "location";
+    let output = await getData(collection, query);
+    res.send(output);
+})
+// app.get('/details', async (req, res) => {
+//     let query = {};
+//     let collection = "details";
+//     let output = await getData(collection, query);
+//     res.send(output);
+// })
 app.get('/products_list_1', async (req, res) => {
     let query = {};
     let collection = "products_list_1";
     let output = await getData(collection, query);
     res.send(output);
 })
+
+app.get('/products_list_1/:category_id', async (req, res) => {
+
+    const categoryId = Number(req.params.category_id); // Parse the category_id as a number
+
+    const query = { category_id: categoryId }; // Build the MongoDB query
+    const collection = "products_list";
+
+    const output = await getData(collection, query); // Fetch data based on the query
+    res.send(output);
+
+})
+
+app.get('/details/:p_id', async (req, res) => {
+    let Pid = Number(req.params.p_id);
+    let query = { p_id: Pid };
+    let collection = "details";
+    let output = await getData(collection, query);
+    res.send(output)
+})
+
+
 // app.get('/mealType', async (req, res) => {
 //     let query = {};
 //     let collection = "mealType";
