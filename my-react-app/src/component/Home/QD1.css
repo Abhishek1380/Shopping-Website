@@ -1,0 +1,138 @@
+/* Box-css */
+.box {
+    height: 60vh;
+    display: flex;
+    margin-left: 20%;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.box-2 {
+    width: 270px;
+    height: 56vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #3865ae;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 19px;
+}
+
+.box-1 {
+    height: 57vh;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.box h2 {
+    color: #fff;
+    width: 90%;
+    margin: 5px auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box img {
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.box-1:hover {
+    width: 271px;
+    border: 1px solid #878787;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 10px 5px 5px #878787;
+}
+
+.brand-img img {
+    width: 100%;
+    text-align: center;
+}
+
+.brand-img img:hover {
+    width: 99%;
+}
+
+.f {
+    cursor: pointer;
+}
+
+.f-1 {
+    color: #000;
+    margin: 7px auto;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.f-2 {
+    color: #5ce71b;
+    margin-bottom: 4px;
+}
+
+.f-3 {
+    color: #878787;
+}
+
+.s-1 {
+    text-align: center;
+}
+
+.s-1 .btn {
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #2874f0;
+}
+
+.s-1 a {
+    color: #fff;
+}
+
+
+
+
+/* Buttons */
+.btn-r {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    background: #fff;
+    padding: 5px 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-rounded-r {
+    border-radius: 3px;
+}
+
+/* Utility Classes */
+.icon-margin {
+    margin-right: 5px;
+}
+
+/* Box-Section */
+.showcase-mid {
+    width: 100%;
+    margin: auto;
+    margin-top: 6px;
+    padding: 5px 10px;
+    background-color: #e9e6ea;
+}
+
+.carousel-inner {
+    width: 100%;
+}

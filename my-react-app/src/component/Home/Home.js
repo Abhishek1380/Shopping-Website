@@ -3,14 +3,16 @@ import ShowcaseTop from "./showcaseTop";
 import ShowcaseMid from "./ShowcaseMid";
 import WebDesc from "./WebDesc";
 // import Header from '../Header';
+import QuickSearch1 from "./QuickSearch1";
 
 const Home = () => {
     return (
         <>
-            {/* <Header /> */}
-            <ShowcaseTop />
+
+            {/* <ShowcaseTop />
             <ShowcaseMid />
-            <WebDesc />
+            <WebDesc /> */}
+            <QuickSearch1 />
         </>
     )
 }

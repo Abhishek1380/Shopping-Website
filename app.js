@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 
 let app = express();
-const port = process.env.PORT || 6001;
+const port = process.env.PORT || 6003;
 
 let { getData, dbConnect, postData } = require('./controller/dbController');
 
@@ -24,9 +24,9 @@ app.get('/', (req, res) => {
     console.log('Message sent');
 })
 
-app.get('/location', async (req, res) => {
+app.get('/products_list_1', async (req, res) => {
     let query = {};
-    let collection = "location";
+    let collection = "products_list_1";
     let output = await getData(collection, query);
     res.send(output);
 })

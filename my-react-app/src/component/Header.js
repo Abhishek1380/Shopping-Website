@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 const base_url = "http://127.0.0.1:6001";
 
@@ -92,6 +93,7 @@ const Header = () => {
                                 <a href="#" className="fa fa-ellipsis-v"></a>
 
                             </div>
+                            <Link className="btn btn-info" to="/">Home</Link>
                         </div>
                     </div>
                 </div>
