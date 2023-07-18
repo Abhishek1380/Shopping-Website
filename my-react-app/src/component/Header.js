@@ -71,8 +71,8 @@ const Header = () => {
                     <div className="Nav-3">
                         <div>
                             <div className="links">
-                                <a href="#" class="fa fa-university icon-margin visible"></a>
-                                <a href="#"> Seller</a>
+                                <a href="#" class="fa fa-home icon-margin visible"></a>
+                                <a href="#"> Home</a>
                             </div>
 
                         </div>
@@ -93,7 +93,7 @@ const Header = () => {
                                 <a href="#" className="fa fa-ellipsis-v"></a>
 
                             </div>
-                            <Link className="btn btn-info" to="/">Home</Link>
+                            {/* <Link className="btn btn-info" to="/">Home</Link> */}
                         </div>
                     </div>
                 </div>

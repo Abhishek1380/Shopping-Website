@@ -1,6 +1,6 @@
 /* Box-css */
 .box {
-    height: 60vh;
+    height: 51vh;
     display: flex;
     margin-left: 20%;
     margin: 10px auto;
@@ -168,8 +168,8 @@
 
 .showcase-mid {
     width: 100%;
-    margin: auto;
-    margin-top: 6px;
+    /* margin: auto; */
+    /* margin-top: 6px; */
     padding: 5px 10px;
     background-color: #e9e6ea;
 }

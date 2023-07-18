@@ -10,6 +10,7 @@ const base_url = "http://127.0.0.1:6003";
 const DetailDisplay = () => {
     let [searchParams] = useSearchParams();
     let [restDetails, setrestDetails] = useState();
+    let [category_id] = useState(sessionStorage.getItem('categoryId'))
     let params = useParams();
 
     let p_id = searchParams.getAll('p_id')

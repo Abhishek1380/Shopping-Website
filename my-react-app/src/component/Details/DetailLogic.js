@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, } from 'react-router-dom'
 import './detail.css';
 import DetailDisplay from './DetailDisplay'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const base_url = "http://127.0.0.1:6003";
+const base_url = "http://127.0.0.1:6005";
 
 const DetailLogic = () => {
 

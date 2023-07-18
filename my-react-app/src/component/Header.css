@@ -63,7 +63,7 @@ hr {
 /* Navigation Bar */
 
 .Navbar {
-    height: 60px;
+    height: 65px;
     background: var(--primary-color);
 }
 
@@ -85,7 +85,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto 24px;
+    margin: 15px 24px;
     width: 7%;
 }
 
@@ -97,7 +97,8 @@ hr {
     align-items: center;
     justify-content: center;
     width: 45%;
-    margin: auto 6px;
+    margin: -1px 6px;
+    margin-bottom: 0px;
 }
 
 .search-input {
@@ -132,7 +133,7 @@ input {
 
 .fa-search {
     font-size: 31px;
-    padding: 2px 10px;
+    /* padding: 2px 10px; */
     background: var(--White);
     border-right: none;
     border-radius: 12px 0px 0px 12px;
@@ -153,6 +154,7 @@ Navbar span i {
 
 h6 {
     font-size: 12px;
+    font-weight: 600;
 }
 
 hr {
@@ -177,6 +179,10 @@ textarea {
 .fa {
     font-size: 23px;
     color: var(--White);
+    height: 44px;
+    margin-top: 10px;
+    color: #343434;
+    padding: 8px 5px;
 }
 
 @media (max-width: 1239px) {

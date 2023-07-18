@@ -5,41 +5,33 @@ import Footer from './Footer';
 import Home from './Home/Home';
 import Main from './Main';
 import ListingLogic from './ListingPage/ListingLogic';
-import DetailLogic from './Details/DetailLogic';
+import DetailDisplay from './Details/DetailDisplay';
+import PlaceOrders from './Orders/PlaceOrders';
+import ViewOrders from './Orders/ViewOrders';
+
 
 
 const Routing = () => {
     return (
         <>
             <BrowserRouter>
-                {/* <Header /> */}
-                {/* <Routes> */}
-                {/* <Route path="/" element={<Main />}>
-                        <Route index element={<Home />} />
-                        <Route path="Home" element={<Home />} /> */}
-
-                {/* <Route path="ListingPage/:category_id" element={<ListingLogic />} /> */}
-                {/* <Route path="ListingPage/ListingLogic" element={<ListingLogic />} /> */}
-
-                {/* </Routes> */}
-
-                {/* <Footer /> */}
-                {/* <ListingLogic /> */}
-                {/* <ListingLogic /> */}
                 {/* <Header />
                 <Routes>
                     <Route path="/" element={<Main />}>
                         <Route index element={<Home />} />
                         <Route path="Home" element={<Home />} />
+                        <Route path="listingPage/:categoryId" element={<ListingLogic />} />
                         <Route path="details" element={<DetailDisplay />} />
+                        <Route path="placeOrders" element={<PlaceOrders />} />
+                        <Route path="viewOrders" element={<ViewOrders />} />
                     </Route>
                 </Routes>
                 <Footer /> */}
-                {/* <Header /> */}
-                <DetailLogic />
-                {/* <Footer /> */}
-            </BrowserRouter >
+                {/* <DetailDisplay /> */}
+                {/* <PlaceOrders /> */}
+                <ViewOrders />
 
+            </BrowserRouter >
         </>
     )
 }

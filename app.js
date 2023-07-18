@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 
 let app = express();
-const port = process.env.PORT || 6003;
+const port = process.env.PORT || 6005;
 
 let { getData, dbConnect, postData } = require('./controller/dbController');
 
@@ -55,12 +55,25 @@ app.get('/products_list_1/:category_id', async (req, res) => {
 
 })
 
-app.get('/details/:p_id', async (req, res) => {
-    let Pid = Number(req.params.p_id);
-    let query = { p_id: Pid };
-    let collection = "details";
+app.get('/product_desc/:productSpec_id', async (req, res) => {
+    let P_id = Number(req.params.productSpec_id);
+    let query = { productSpec_id: P_id };
+    let collection = "product_desc_new";
     let output = await getData(collection, query);
     res.send(output)
+})
+app.get('/product_desc', async (req, res) => {
+    let query = {};
+    let collection = "product_desc";
+    let output = await getData(collection, query);
+    res.send(output);
+})
+app.post('/placeOrder', async (req, res) => {
+    let data = req.body;
+    let collection = "Final_order";
+    console.log(">>>", data)
+    let response = await postData(collection, data)
+    res.send(response)
 })
 
 

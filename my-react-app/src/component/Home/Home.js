@@ -9,10 +9,12 @@ const Home = () => {
     return (
         <>
 
-            {/* <ShowcaseTop />
+            {/* 
             <ShowcaseMid />
             <WebDesc /> */}
+            {/* <ShowcaseTop /> */}
             <QuickSearch1 />
+            {/* <ShowcaseMid /> */}
         </>
     )
 }

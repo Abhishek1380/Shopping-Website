@@ -13,12 +13,14 @@ const ListingLogic = () => {
 
     useEffect(() => {
         let categoryId = params.category_id;
+        sessionStorage.setItem('category_id', categoryId);
+
         axios.get(`${base_url}/products_list_1?category_id=${categoryId}`)
             .then((res) => {
                 setRestList(res.data);
             })
     }, [])
-    // }, [])
+
 
     return (
         <>
