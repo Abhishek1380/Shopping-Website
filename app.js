@@ -42,6 +42,24 @@ app.get('/products_list_1', async (req, res) => {
     let output = await getData(collection, query);
     res.send(output);
 })
+app.get('/ProductList2', async (req, res) => {
+    let query = {};
+    let collection = "ProductList2";
+    let output = await getData(collection, query);
+    res.send(output);
+})
+app.get('/ProductList1', async (req, res) => {
+    let query = {};
+    let collection = "ProductList1";
+    let output = await getData(collection, query);
+    res.send(output);
+})
+app.get('/ProductList3', async (req, res) => {
+    let query = {};
+    let collection = "ProductList3";
+    let output = await getData(collection, query);
+    res.send(output);
+})
 
 app.get('/products_list_1/:category_id', async (req, res) => {
 

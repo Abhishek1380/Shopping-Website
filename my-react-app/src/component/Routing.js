@@ -7,7 +7,7 @@ import Main from './Main';
 import ListingLogic from './ListingPage/ListingLogic';
 import DetailDisplay from './Details/DetailDisplay';
 import PlaceOrders from './Orders/PlaceOrders';
-import ViewOrders from './Orders/ViewOrders';
+// import ViewOrders from './Orders/ViewOrders';
 
 
 
@@ -29,8 +29,15 @@ const Routing = () => {
                 <Footer /> */}
                 {/* <DetailDisplay /> */}
                 {/* <PlaceOrders /> */}
-                <ViewOrders />
-
+                {/* <Header /> */}
+                <Header />
+                <Home />
+                <Footer />
+                {/* <ListingLogic /> */}
+                {/* <DetailDisplay /> */}
+                {/* <ViewOrders /> */}
+                {/* <PlaceOrders /> */}
+                {/* <ViewOrders /> */}
             </BrowserRouter >
         </>
     )

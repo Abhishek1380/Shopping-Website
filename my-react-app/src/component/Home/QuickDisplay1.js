@@ -37,24 +37,25 @@ const QuickDisplay1 = (props) => {
 
 
     return (
-        <div className="showcase-mid">
-            <div className="box">
-                <div className="box-2">
-                    <h2>Best of Electronics</h2>
-                    <div className="s-1">
-                        <button className="btn">
-                            <a href="#">View all</a>
-                        </button>
-                        <div className="Image">
-                            <img src="https://i.ibb.co/TmY7GyF/Animated-1.jpg" alt="Animated-1" border="0" />
-                        </div>
+
+        <div className="box">
+            <div className="box-2">
+                <h2>Best of Electronics</h2>
+                <div className="s-1">
+                    <button className="btn">
+                        <a href="#">View all</a>
+                    </button>
+                    <div className="Image">
+                        <img src="https://i.ibb.co/TmY7GyF/Animated-1.jpg" alt="Animated-1" border="0" />
                     </div>
                 </div>
-                {listMeal(props)}
             </div>
-
+            {listMeal(props)}
         </div>
+
+
     )
 }
 
 export default QuickDisplay1;
+

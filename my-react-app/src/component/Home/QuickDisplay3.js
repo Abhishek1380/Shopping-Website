@@ -1,0 +1,62 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const QuickDisplay3 = (props) => {
+    const listMeal = ({ mealData2 }) => {
+
+        if (Array.isArray(mealData2)) { // Check if mealData is an array
+            return mealData2.map((item) => {
+
+                return (
+                    // <Link to={`/Listing_page/${item.category_id}`} >
+                    <div className="box-1" key={item.p_id}>
+                        <div className="brand-img">
+                            <img src={item.image} alt="Brand-1" border="0" />
+                        </div>
+                        <div className="f">
+                            <div className="f-1 center">{item.p_name}</div>
+                            <div className="f-2 center">{item.price}</div>
+                            <div className="f-3 center">{item.company}</div>
+                        </div>
+                    </div>
+                    // </Link>
+                )
+            }
+            );
+
+
+        } else {
+            return null; // Return null or handle the case when mealData is not an array
+        }
+    };
+
+
+
+
+
+
+
+    return (
+
+
+        <div class="box">
+            <div class="box-2">
+                <h2>Pick your style</h2>
+                <div class="s-1">
+                    <button class="btn">
+                        <a href="#">View all</a>
+                    </button>
+                    <div class="Image">
+                        <img src="https://i.ibb.co/Rb78v8G/Animated-3.jpg" alt="Animated-3" border="0" />
+                    </div>
+                </div>
+            </div>
+            {listMeal(props)}
+        </div>
+
+
+    )
+}
+
+export default QuickDisplay3;
+

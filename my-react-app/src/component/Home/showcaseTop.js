@@ -1,5 +1,5 @@
 import React from 'react';
-import './ShowcaseTop.css';
+import './ShowcaseMid';
 
 const ShowcaseTop = () => {
     return (

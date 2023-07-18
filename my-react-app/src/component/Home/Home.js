@@ -3,18 +3,22 @@ import ShowcaseTop from "./showcaseTop";
 import ShowcaseMid from "./ShowcaseMid";
 import WebDesc from "./WebDesc";
 // import Header from '../Header';
-import QuickSearch1 from "./QuickSearch1";
+// import QuickSearch2 from "./QuickSearch2";
+// import QuickSearch3 from "./QuickSearch3";
+// import ShowcaseMid from "./ShowcaseMid";
+
 
 const Home = () => {
     return (
         <>
 
-            {/* 
+            <div className="showcase">
+                <ShowcaseTop />
+            </div>
             <ShowcaseMid />
-            <WebDesc /> */}
-            {/* <ShowcaseTop /> */}
-            <QuickSearch1 />
-            {/* <ShowcaseMid /> */}
+            <WebDesc />
+
+
         </>
     )
 }

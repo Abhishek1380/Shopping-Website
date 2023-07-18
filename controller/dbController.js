@@ -34,7 +34,7 @@ async function postData(colName, data) {
     }
 }
 
-const db = client.db("Company");
+const db = client.db("Shopping_Website");
 
 
 module.exports = {

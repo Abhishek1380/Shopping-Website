@@ -1,0 +1,34 @@
+[
+    {
+        "category_id": 2,
+        "p_id": 5,
+        "image": "https://i.ibb.co/Zd710ZV/Img-1.webp",
+        "p_name": "Food Spreads",
+        "price": "Upto 75% off",
+        "company": "Myfiness,Alpino & More"
+    },
+    {
+        "category_id": 2,
+        "p_id": 6,
+        "image": "https://i.ibb.co/Ttwxhnq/Img-2.webp",
+        "p_name": "Ab Exerciser",
+        "price": "From $20",
+        "company": "Adrenex,Manogyam & More"
+    },
+    {
+        "category_id": 2,
+        "p_id": 7,
+        "image": "https://i.ibb.co/QK2WDZV/Img-3.webp",
+        "p_name": "Baby Bathing Accessories",
+        "price": "Under $25",
+        "company": "Baby Bath Tubes & More"
+    },
+    {
+        "category_id": 2,
+        "p_id": 8,
+        "image": "https://i.ibb.co/mbJKGV5/Img-4.webp",
+        "p_name": "Car Lubricant",
+        "price": "Upto 45% Off",
+        "company": "Mobil,Shell,Castrol & More"
+    }
+]

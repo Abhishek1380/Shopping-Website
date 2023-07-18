@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import DisplayOrder from './DisplayOrder';
-import Header from '../Header';
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+// import DisplayOrder from './DisplayOrder';
+// import Header from '../Header';
 
-const url = "http://localhost:6005/PlaceOrder"
+// const url = "http://localhost:6005/PlaceOrder"
 
-const ViewOrder = () => {
+// const ViewOrder = () => {
 
-    const [orders, setOrder] = useState();
-    // let sessionData = sessionStorage.getItem('userInfo');
-    // let data = JSON.parse(sessionData)
+//     const [orders, setOrder] = useState();
+//     // let sessionData = sessionStorage.getItem('userInfo');
+//     // let data = JSON.parse(sessionData)
 
-    useEffect(() => {
-        axios.get(`${url}?email=${data.email}`).then((res) => { setOrder(res.data) })
-    })
+//     useEffect(() => {
+//         axios.get(`${url}?email=${data.email}`).then((res) => { setOrder(res.data) })
+//     })
 
-    return (
-        <>
-            <Header />
-            <DisplayOrder orderData={orders} />
-        </>
+//     return (
+//         <>
+//             <Header />
+//             <DisplayOrder orderData={orders} />
+//         </>
 
-    )
+//     )
 
-}
+// }
 
-export default ViewOrder;
+// export default ViewOrder;
