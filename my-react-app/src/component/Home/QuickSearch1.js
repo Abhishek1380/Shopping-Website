@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ShowcaseMid';
+import '../ShowcaseMid.css';
 import QuickDisplay1 from './QuickDisplay1';
 
 const base_url = "http://127.0.0.1:6005";
