@@ -1,235 +1,113 @@
-* {
+#mainListing {
+    margin-left: 4%;
+    margin-top: 5%;
+}
+
+#filter {
+    height: 321px;
+    width: 288px;
+    float: left;
+    border: 5px solid gray;
+}
+
+#content {
+    width: 65%;
+    float: left;
+    margin-left: 5%;
+    margin-top: -1%;
+
+}
+
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html,
-body {
-    background-color: #e9e6ea;
-}
-
-/* #f1f3f6 */
-body {
-    background: #282222;
-    font-family: inter_semi_bold, fallback-inter_semi_bold, Arial, sans-serif;
+    background-color: #fdfdfd;
 }
 
 :root {
-    --primary-color: #2874f0;
-    --White: #fff;
-    --bs-gray: #6c757d;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-li a {
-    text-decoration: none;
-    width: 50px;
-    margin: 20px;
-    font-size: 17px;
-    color: #fff;
-    font-weight: 700;
+    --dark-grey: #4a4848;
+    --light-grey: #9e9e9e;
+    --nice-blue: #274390;
 }
 
 
 
 img {
-    width: 100%;
+    width: 98%;
 }
 
-.myDark {
-    background: #000;
-    color: #fff;
-}
 
-hr {
-    margin: 1rem 0;
-    color: #fff;
-    border: 0;
-    border-top: solid;
-    opacity: 0.7;
-}
-
-hr {
-    border-top: 2px solid #d4d3d3;
-}
-
-/* Box CSS */
-.box {
-    height: 45vh;
-    display: flex;
-    margin-left: 20%;
-    /* width: 98%; */
-    margin: 10px auto;
-    background-color: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-
-}
-
-.box-2 {
-    /* width: 270px; */
-    height: 40vh;
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
+.section {
+    width: 75%;
+    height: 50vh;
+    /* margin-bottom: 63px; */
     cursor: pointer;
-    background-color: #3865ae;
-    /* background-image: url('../Img/Animated-1.jpg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 19px;
+    margin-bottom: 50px;
 }
 
-.box-1 {
-    height: 54vh;
+.sec:hover {
+    box-shadow: 0 0 10px #a79f9f;
+    border: hidden;
+}
+
+.sec {
+    margin: 11px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 48vh;
+    padding: 25px;
+    border: 1px solid var(--light-grey);
+    background-color: #fff;
+    border-radius: 31px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.22);
 }
 
-.box h2 {
-    color: #fff;
-    width: 90%;
-    margin: 5px auto;
-    text-align: center;
+.logo img {
+    border-radius: 20px;
+
+}
+
+.sec-2 {
+    margin-left: 25px;
+}
+
+.bt-1 {
     margin-bottom: 20px;
 }
 
-.box img {
-    width: 150px;
-    margin-top: 10px;
-    border-radius: 10px;
-
-}
-
-.box img:hover {
-    width: 190px;
-
-}
-
-.box-1:hover {
-
-    border: 1px solid #878787;
-    border-radius: 20px;
-    box-shadow: 10px 5px 5px #878787;
-}
-
-.brand-img img {
-    width: 100%;
-    text-align: center;
-}
-
-.brand-img img:hover {
-    width: 99%;
-}
-
-.f {
-    cursor: pointer;
-}
-
-.f-1 {
-    color: #000;
-    margin: 7px auto;
-    font-size: 16px;
+p {
+    color: var(--dark-grey);
     font-weight: 600;
-    margin-top: 15px;
 }
 
-.f-2 {
-    color: #5ce71b;
-    margin-bottom: 4px;
+/* Class Cuisine */
+.cuisine {
+    margin-left: 30%;
+    width: 80%;
 }
 
-.f-3 {
-    color: #878787;
+/* Filter Section */
+.radio-button {
+    margin-left: 30px;
+    margin-bottom: 50px;
 }
 
-.s-1 {
+.filter h2,
+h3 {
+    color: var(--dark-grey);
+}
+
+.center {
     text-align: center;
 }
 
-.s-1 .btn {
-    padding: 12px;
-    font-size: 16px;
-    color: white;
-    background-color: #2874f0;
+.flexy {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.s-1 a {
-    color: #fff;
-}
-
-
-/* Fashion Products Page Css */
-.fashion_section_1 {
-    width: 100%;
-    border-color: azure;
-    text-align: center;
-    height: 12vh;
-    /* margin-top: 2rem;
-    padding-bottom: 2rem; */
-    background: #fff;
-}
-
-.fashion_section_1 button {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-
-}
-
-.fashion_section_2 {
-    padding-bottom: 2rem;
-    background-color: #fff;
-
-}
-
-.fashion_sec_1 {
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: auto;
-
-}
-
-.img-m {
-    width: 40%;
-}
-
-.mydark {
-    background-color: black;
-    color: white
-}
-
-/* Responsive Css */
-@media (max-width: 863px) {
-    .fashion_sec_1 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 660px) {
-    .fashion_sec_1 {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .box-1 {
-        height: 63vh;
-    }
+.logo {
+    width: 77%;
+    margin-top: 22px;
 }

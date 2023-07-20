@@ -10,21 +10,23 @@ const ListingDisplay = (props) => {
 
 
 
-                        <div className="box-1" key={item._id}   >
 
-                            <div className="brand-img">
-                                <img src={item.image} alt="BenQ-7" border="0" />
-                            </div>
-                            <div className="f">
-                                <div className="f-1 center">
-                                    <Link to={`/ListingProducts/${item.p_id}`}>{item.p_name}</Link>
-
+                        <Link to={`/Listing_page/${item.ProductSpec_id}`} >
+                            < div className="section" key={item._id}>
+                                <div className="sec">
+                                    <div className="logo">
+                                        <img src={item.image} alt="Food Image" />
+                                    </div>
+                                    <div className="sec-2">
+                                        <h2>AMA Cafe</h2>
+                                        <p>BenQ EW 23.8 inch Full HD LED Backlit IPS Panel Built-in Speakers, Blue Light Filter, Wall Mountable, Tilt Adjustment, Flicker-Free Monitor (EW2480)</p>
+                                        <p>Review: Average</p>
+                                        <p>Price: Rs.450</p>
+                                        <p>Ratings: 345</p>
+                                    </div>
                                 </div>
-                                <div className="f-2 center">{item.price}</div>
-                                <div className="f-3 center">{item.company}</div>
                             </div>
-                        </div>
-
+                        </Link >
 
 
 
@@ -47,15 +49,14 @@ const ListingDisplay = (props) => {
         }
 
         return (
-            <>
 
 
-                <div class="fashion_section_2">
-                    <div class="fashion_sec_1">
-                        {renderData(props)}
-                    </div>
-                </div>
-            </>
+
+            <div className='cuisine'>
+                {renderData(props)}
+            </div>
+
+
         );
     }
 }

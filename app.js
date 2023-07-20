@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 
 let app = express();
-const port = process.env.PORT || 6009;
+const port = process.env.PORT || 9001;
 
 let { getData, dbConnect, postData } = require('./controller/dbController');
 
@@ -61,14 +61,14 @@ app.get('/ProductList3', async (req, res) => {
     res.send(output);
 })
 
-app.get('/ProductList/:category_id', async (req, res) => {
+app.get('/ProductList/:p_id', async (req, res) => {
 
-    const categoryId = Number(req.params.category_id); // Parse the category_id as a number
+    const P_Id = Number(req.params.p_id);
 
-    const query = { category_id: categoryId }; // Build the MongoDB query
+    const query = { p_id: P_Id };
     const collection = "ProductList";
 
-    const output = await getData(collection, query); // Fetch data based on the query
+    const output = await getData(collection, query);
     res.send(output);
 
 })

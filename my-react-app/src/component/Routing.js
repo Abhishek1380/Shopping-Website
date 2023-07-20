@@ -24,7 +24,7 @@ const Routing = () => {
                     <Route path="/" element={<Main />}>
                         <Route index element={<Home />} />
                         <Route path="Home" element={<Home />} />
-                        <Route path="Listing_page/:category_id" element={<ListingLogic />} />
+                        <Route path="Listing_page/:p_id" element={<ListingLogic />} />
                         <Route path="ListingProducts/:productId" element={<ListingPLogic />} />
                         <Route path="details" element={<DetailDisplay />} />
                         <Route path="placeOrders" element={<PlaceOrders />} />
