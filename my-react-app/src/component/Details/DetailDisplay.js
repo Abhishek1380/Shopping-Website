@@ -99,7 +99,7 @@ const DetailDisplay = () => {
     const fetchRestDetails = async () => {
         try {
 
-            const response = await axios.get(`${base_url}/product_desc?productSpec_id=${P_id}`);
+            const response = await axios.get(`${base_url}/details?productSpec_id=${P_id}`);
             setRestDetails(response.data[2]);
         } catch (error) {
             console.error('Error fetching data:', error);

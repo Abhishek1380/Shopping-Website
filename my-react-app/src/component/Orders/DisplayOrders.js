@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Display = (props) => {
+const DisplayOrders = (props) => {
 
     const renderData = ({ orderData }) => {
         if (orderData) {
@@ -8,7 +8,7 @@ const Display = (props) => {
                 return (
                     <tr key={item.id}>
                         <td>{item.id}</td>
-                        {/* <td>{item.rest_name}</td> */}
+                        <td>{item.product}</td>
                         <td>{item.name}</td>
                         <td>{item.email}</td>
                         <td>Rs. {item.cost}</td>
@@ -26,7 +26,7 @@ const Display = (props) => {
                 <thead>
                     <tr>
                         <th>OrderId</th>
-                        <th>Rname</th>
+                        <th>Product</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Cost</th>
@@ -43,4 +43,4 @@ const Display = (props) => {
 
 }
 
-export default Display;
+export default DisplayOrders;

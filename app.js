@@ -36,9 +36,9 @@ app.get('/location', async (req, res) => {
 //     let output = await getData(collection, query);
 //     res.send(output);
 // })
-app.get('/products_list_1', async (req, res) => {
+app.get('/ProductList', async (req, res) => {
     let query = {};
-    let collection = "products_list_1";
+    let collection = "ProductList";
     let output = await getData(collection, query);
     res.send(output);
 })
@@ -61,34 +61,60 @@ app.get('/ProductList3', async (req, res) => {
     res.send(output);
 })
 
-app.get('/products_list_1/:category_id', async (req, res) => {
+app.get('/ProductList/:category_id', async (req, res) => {
 
     const categoryId = Number(req.params.category_id); // Parse the category_id as a number
 
     const query = { category_id: categoryId }; // Build the MongoDB query
-    const collection = "products_list";
+    const collection = "ProductList";
 
     const output = await getData(collection, query); // Fetch data based on the query
     res.send(output);
 
 })
 
-app.get('/product_desc/:productSpec_id', async (req, res) => {
-    let P_id = Number(req.params.productSpec_id);
-    let query = { productSpec_id: P_id };
-    let collection = "product_desc_new";
+app.get('/ProductDesc/:p_id', async (req, res) => {
+    let P_id = Number(req.params.p_id);
+    let query = { p_id: P_id };
+    let collection = "ProductDesc";
     let output = await getData(collection, query);
     res.send(output)
 })
+app.get('/details/:productSpec_id', async (req, res) => {
+    let P_id = Number(req.params.productSpec_id);
+    let query = { productSpec_id: P_id };
+    let collection = "ProductDesc";
+    let output = await getData(collection, query);
+    res.send(output)
+})
+
 app.get('/product_desc', async (req, res) => {
     let query = {};
     let collection = "product_desc";
     let output = await getData(collection, query);
     res.send(output);
 })
-app.post('/placeOrder', async (req, res) => {
+app.get('/orders', async (req, res) => {
+    let query = {};
+    // if (req.query.email) {
+    //     query = { email: req.query.email }
+    // } else {
+    //     query = {}
+    // }
+
+    let collection = "Order";
+    let output = await getData(collection, query);
+    res.send(output)
+})
+
+
+
+
+
+
+app.post('/placeOrders', async (req, res) => {
     let data = req.body;
-    let collection = "Final_order";
+    let collection = "Order";
     console.log(">>>", data)
     let response = await postData(collection, data)
     res.send(response)

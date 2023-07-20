@@ -8,18 +8,18 @@ const QuickDisplay3 = (props) => {
             return mealData2.map((item) => {
 
                 return (
-                    // <Link to={`/Listing_page/${item.category_id}`} >
-                    <div className="box-1" key={item.p_id}>
-                        <div className="brand-img">
-                            <img src={item.image} alt="Brand-1" border="0" />
+                    <Link to={`/Listing_page/${item.category_id}`} >
+                        <div className="box-1" key={item._id}>
+                            <div className="brand-img">
+                                <img src={item.image} alt="Brand-1" border="0" />
+                            </div>
+                            <div className="f">
+                                <div className="f-1 center">{item.p_name}</div>
+                                <div className="f-2 center">{item.price}</div>
+                                <div className="f-3 center">{item.company}</div>
+                            </div>
                         </div>
-                        <div className="f">
-                            <div className="f-1 center">{item.p_name}</div>
-                            <div className="f-2 center">{item.price}</div>
-                            <div className="f-3 center">{item.company}</div>
-                        </div>
-                    </div>
-                    // </Link>
+                    </Link>
                 )
             }
             );

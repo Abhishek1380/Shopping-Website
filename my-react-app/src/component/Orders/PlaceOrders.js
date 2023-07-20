@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../Header';
+import './PlaceOrders.css';
 
-const url = "http://localhost:6005/PlaceOrder";
+const url = "http://localhost:6005/PlaceOrders";
 
 const PlaceOrders = () => {
     let params = useParams();
@@ -15,6 +16,7 @@ const PlaceOrders = () => {
         id: Math.floor(Math.random() * 100000),
         name: '',
         email: '',
+        product: '',
         cost: Math.floor(Math.random() * 1000),
         phone: '',
         address: "Hno 12 Sec 34",
@@ -44,48 +46,30 @@ const PlaceOrders = () => {
 
     return (
         <>
-            <div className="container">
-                <hr />
-                <div className="panel panel-primary">
-                    <div className="panel-heading">
-                        {/* <h3>Order For {params.restName}</h3> */}
-                    </div>
-                    <div className="panel-body">
-                        {/* <input type="hidden" name="cost" value={values.cost}/>
-                        <input type="hidden" name="id" value={values.id}/>
-                        <input type="hidden" name="rest_name" value={values.rest_name}/> */}
-                        <div className="row">
-                            <div className="col-md-6 form-group">
-                                <label for="fname" className="control-label">Name</label>
-                                <input className="form-control" id="fname"
-                                    name="name" value={values.name} onChange={handleInputChange} />
-                            </div>
-                            <div className="col-md-6 form-group">
-                                <label for="email" className="control-label">Email</label>
-                                <input className="form-control" id="email"
-                                    name="email" value={values.email} onChange={handleInputChange} />
-                            </div>
-                            <div className="col-md-6 form-group">
-                                <label for="email" className="control-label">Phone</label>
-                                <input className="form-control" id="phone"
-                                    name="phone" value={values.phone} onChange={handleInputChange} />
-                            </div>
-                            <div className="col-md-6 form-group">
-                                <label for="address" className="control-label">Address</label>
-                                <input className="form-control" id="address"
-                                    name="address" value={values.address} onChange={handleInputChange} />
-                            </div>
-
+            <div className="containerForm">
+                <div className="contain1">
+                    <h2>Place Your Order</h2>
+                    <form>
+                        <div className="form-group">
+                            <input type="text" id="name" name="name" placeholder="Name" required onChange={handleInputChange} />
                         </div>
-                        <div className="row">
-                            <div className="col-md-12">
-                                <h2>Total Price is Rs. {values.cost}</h2>
-                            </div>
+                        <div className="form-group">
+                            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required onChange={handleInputChange} />
                         </div>
-                        <button className='btn btn-success' onClick={checkout}>
-                            Submit
-                        </button>
-                    </div>
+                        <div className="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required onChange={handleInputChange} />
+                        </div>
+                        <div className="form-group">
+                            <input type="text" id="cost" name="cost" placeholder="Product Cost" required onChange={handleInputChange} />
+                        </div>
+                        <div className="form-group">
+                            <input type="text" id="product" name="product" placeholder="Product Name" required onChange={handleInputChange} />
+                        </div>
+                        <div className="form-group">
+                            <input type="text" id="address" name="address" placeholder="Address" required onChange={handleInputChange} />
+                        </div>
+                        <button className="submit" type="submit" onClick={checkout}>Place Order</button>
+                    </form>
                 </div>
             </div>
         </>

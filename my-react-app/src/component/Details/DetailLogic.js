@@ -11,10 +11,11 @@ const DetailLogic = () => {
 
     let params = useParams();
     const [restDetails, setrestDetails] = useState();
+    let P_id = params.productSpec_id;
 
     useEffect(() => {
-        let P_id = params.p_id;
-        axios.get(`${base_url}/products_list_1?p_id=${P_id}`)
+
+        axios.get(`${base_url}/details?productSpec_id=${P_id}`)
             .then((res) => {
                 setrestDetails(res.data[1]);
                 console.log(res.data);

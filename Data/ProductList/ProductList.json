@@ -1,0 +1,98 @@
+[
+    {
+        "category_id": 1,
+        "image": "https://i.ibb.co/C9Dzt6R/Brand-1.webp",
+        "p_id": 1,
+        "p_name": "Designer Cases and Covers",
+        "price": "Just $14",
+        "company": "All Top Models"
+    },
+    {
+        "category_id": 1,
+        "p_id": 2,
+        "image": "https://i.ibb.co/YtjXhmq/Brand-2.webp",
+        "p_name": "Top Mirrorless Cameras",
+        "price": "Just $14",
+        "company": "Canon,Sony,Fuijifilm..."
+    },
+    {
+        "category_id": 1,
+        "p_id": 3,
+        "image": "https://i.ibb.co/BVsBqxh/Brand-3.webp",
+        "p_name": "Premium Power Banks",
+        "price": "Just $14",
+        "company": "Mi,Realme & More"
+    },
+    {
+        "category_id": 1,
+        "p_id": 4,
+        "image": "https://i.ibb.co/qDKx05B/Brand-4.webp",
+        "p_name": "Plain Cases and Covers",
+        "price": "Just $14",
+        "company": "For All Top Models"
+    },
+    {
+        "category_id": 2,
+        "p_id": 5,
+        "image": "https://i.ibb.co/Zd710ZV/Img-1.webp",
+        "p_name": "Food Spreads",
+        "price": "Upto 75% off",
+        "company": "Myfiness,Alpino & More"
+    },
+    {
+        "category_id": 2,
+        "p_id": 6,
+        "image": "https://i.ibb.co/Ttwxhnq/Img-2.webp",
+        "p_name": "Ab Exerciser",
+        "price": "From $20",
+        "company": "Adrenex,Manogyam & More"
+    },
+    {
+        "category_id": 2,
+        "p_id": 7,
+        "image": "https://i.ibb.co/QK2WDZV/Img-3.webp",
+        "p_name": "Baby Bathing Accessories",
+        "price": "Under $25",
+        "company": "Baby Bath Tubes & More"
+    },
+    {
+        "category_id": 2,
+        "p_id": 8,
+        "image": "https://i.ibb.co/mbJKGV5/Img-4.webp",
+        "p_name": "Car Lubricant",
+        "price": "Upto 45% Off",
+        "company": "Mobil,Shell,Castrol & More"
+    },
+    {
+        "category_id": 3,
+        "p_id": 9,
+        "image": "https://i.ibb.co/xjkffQZ/part-2.webp",
+        "p_name": "Watches",
+        "price": "From $25",
+        "company": "Best Selling"
+    },
+    {
+        "category_id": 3,
+        "p_id": 10,
+        "image": "https://i.ibb.co/R4PnXXc/part-11.webp",
+        "p_name": "U.S Polo Assn.,Highlander",
+        "price": "Min. 40% Off",
+        "company": "Sneakers,Loafers,Slides"
+    },
+    {
+        "category_id": 3,
+        "p_id": 11,
+        "image": "https://i.ibb.co/qmtL6Jm/part-111.webp",
+        "p_name": "Sweatshirts,Hoodies,Jackets...",
+        "price": "From $25",
+        "company": "Wildcrafts,Fort collins..."
+    },
+    {
+        "category_id": 3,
+        "p_id": 12,
+        "image": "https://i.ibb.co/16VXSyw/part-1111.webp",
+        "p_name": "Bags,Trolleys,Luggage...",
+        "price": "50-70% + Extra 10% Off",
+        "company": "Wildcrafts,American Tourister"
+    }
+]
