@@ -6,9 +6,7 @@ import QuickSearch2 from './QuickSearch2';
 import QuickSearch3 from './QuickSearch3';
 
 const ShowcaseMid = () => {
-    // const couponStyle = {
-    //     color: 'red',
-    // };
+
 
     const closeCoupon = () => {
         // window.onload = loadCoupon();

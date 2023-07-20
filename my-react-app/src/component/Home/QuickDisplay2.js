@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const QuickDisplay2 = (props) => {
-    const listMeal = ({ mealData1 }) => {
+const QuickDisplay1 = (props) => {
+    const listMeal = ({ mealData }) => {
 
-        if (Array.isArray(mealData1)) { // Check if mealData is an array
-            return mealData1.map((item) => {
+        if (Array.isArray(mealData)) { // Check if mealData is an array
+            return mealData.map((item) => {
 
                 return (
-                    <Link to={`/Listing_page/${item.category_id}`} >
+                    <Link to={`/Listing_page/${item.p_id}`} >
                         <div className="box-1" key={item._id}>
                             <div className="brand-img">
                                 <img src={item.image} alt="Brand-1" border="0" />
@@ -38,7 +38,7 @@ const QuickDisplay2 = (props) => {
 
     return (
 
-        <div className='box'>
+        <div className="box">
             <div className="box-2">
                 <h2>Top deals</h2>
                 <div className="s-1">
@@ -50,13 +50,17 @@ const QuickDisplay2 = (props) => {
                     </div>
                 </div>
             </div>
-            {listMeal(props)}
-        </div>
 
+            {listMeal(props)}
+        </div >
 
 
     )
 }
 
-export default QuickDisplay2;
+export default QuickDisplay1;
+
+
+
+
 

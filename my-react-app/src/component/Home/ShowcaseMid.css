@@ -102,8 +102,8 @@ hr {
 }
 
 /* Box-css */
-.boxe {
-    height: 100vh;
+.box {
+    height: 60vh !important;
     display: flex;
     margin-left: 20%;
     margin: 10px auto;
@@ -114,7 +114,7 @@ hr {
 
 .box-2 {
     width: 270px;
-    height: 56vh;
+    height: 56vh !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,6 +125,14 @@ hr {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 19px;
+}
+
+.Image {
+    width: 170px !important;
+    height: 183px !important;
+    border-radius: 23px;
+
+    margin-left: 5%;
 }
 
 .box-1 {
@@ -138,7 +146,7 @@ hr {
 }
 
 .box h2 {
-    color: #fff;
+    color: #fff !important;
     width: 90%;
     margin: 5px auto;
     text-align: center;

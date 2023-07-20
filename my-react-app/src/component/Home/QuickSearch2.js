@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import './ShowcaseMid.css';
 import QuickDisplay2 from './QuickDisplay2';
 
-const base_url = "http://127.0.0.1:6005";
-const QuickSearch2 = () => {
+const base_url = "http://127.0.0.1:6009";
+const QuickSearch1 = () => {
 
-    const [mealType1, setMealType1] = useState();
+    const [mealType, setMealType] = useState();
 
     useEffect(() => {
         fetch(`${base_url}/ProductList2`, { method: 'GET' })
             .then((res) => res.json())
             .then((data) => {
-                setMealType1(data);
+                setMealType(data);
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
@@ -21,13 +21,13 @@ const QuickSearch2 = () => {
     return (
 
 
-        <div className="box">
 
-            <QuickDisplay2 mealData1={mealType1} />
 
-        </div>
+        <QuickDisplay2 mealData={mealType} />
+
+
 
 
     )
 }
-export default QuickSearch2;
+export default QuickSearch1;

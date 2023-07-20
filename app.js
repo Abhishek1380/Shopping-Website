@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 
 let app = express();
-const port = process.env.PORT || 6005;
+const port = process.env.PORT || 6009;
 
 let { getData, dbConnect, postData } = require('./controller/dbController');
 

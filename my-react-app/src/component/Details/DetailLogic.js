@@ -5,7 +5,7 @@ import DetailDisplay from './DetailDisplay'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const base_url = "http://127.0.0.1:6005";
+const base_url = "http://127.0.0.1:6006";
 
 const DetailLogic = () => {
 

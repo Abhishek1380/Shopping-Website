@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import Header from '../Header';
 
-const base_url = "http://127.0.0.1:6005";
+const base_url = "http://127.0.0.1:6006";
 
 // const DetailDisplay = () => {
 

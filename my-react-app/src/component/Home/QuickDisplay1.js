@@ -8,7 +8,7 @@ const QuickDisplay1 = (props) => {
             return mealData.map((item) => {
 
                 return (
-                    <Link to={`/Listing_page/${item.category_id}`} >
+                    <Link to={`/Listing_page/${item.p_id}`} >
                         <div className="box-1" key={item._id}>
                             <div className="brand-img">
                                 <img src={item.image} alt="Brand-1" border="0" />
