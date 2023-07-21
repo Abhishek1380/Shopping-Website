@@ -6,11 +6,11 @@ import Footer from './Footer';
 // import QuickSearch1 from './QuickSearch1';
 import Home from './Home/Home';
 import Main from './Main';
-import ListingLogic from './Listing_Page/ListingLogic';
+import Listing from './Listing_Page/Listing';
 import DetailDisplay from './Details/DetailDisplay';
 import PlaceOrders from './Orders/PlaceOrders';
 import ListingPLogic from './ListingProduct/ListingPLogic';
-import ViewOrders from './Orders/ViewOrders';
+import JustOrder from './Orders/JustOrder';
 import ShowcaseMid from './Home/ShowcaseMid';
 
 
@@ -24,13 +24,14 @@ const Routing = () => {
                     <Route path="/" element={<Main />}>
                         <Route index element={<Home />} />
                         <Route path="Home" element={<Home />} />
-                        <Route path="Listing_page/:p_id" element={<ListingLogic />} />
-                        <Route path="ListingProducts/:productId" element={<ListingPLogic />} />
+                        <Route path="Listing_page/:p_id" element={<Listing />} />
                         <Route path="details" element={<DetailDisplay />} />
-                        <Route path="placeOrders" element={<PlaceOrders />} />
-                        <Route path="viewOrders" element={<ViewOrders />} />
+                        <Route path="placeOrder/:product_name" element={<PlaceOrders />} />
+                        <Route path="JustOrder" element={<JustOrder />} />
                     </Route>
                 </Routes>
+
+
                 <Footer />
             </BrowserRouter >
         </>

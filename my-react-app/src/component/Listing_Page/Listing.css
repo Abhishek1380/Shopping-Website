@@ -10,14 +10,6 @@
     border: 5px solid gray;
 }
 
-#content {
-    width: 65%;
-    float: left;
-    margin-left: 5%;
-    margin-top: -1%;
-
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -34,7 +26,7 @@ body {
 
 
 img {
-    width: 98%;
+    width: 83%;
 }
 
 
@@ -69,6 +61,15 @@ img {
 
 .sec-2 {
     margin-left: 25px;
+    padding-left: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 151px;
+    margin-top: 51px;
+    border-left: 2px solid #fff;
+    flex-direction: column;
+    width: 112%;
 }
 
 .bt-1 {

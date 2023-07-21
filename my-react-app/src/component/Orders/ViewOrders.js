@@ -3,7 +3,7 @@ import axios from 'axios';
 import DisplayOrder from './DisplayOrders';
 import Header from '../Header';
 
-const url = "http://localhost:6005/orders";
+const url = "http://localhost:9001/orders";
 
 const ViewOrder = () => {
 

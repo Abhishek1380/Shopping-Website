@@ -17,7 +17,7 @@ const ListingLogic = () => {
 
         sessionStorage.setItem('p_id', P_Id);
 
-        axios.get(`${base_url}/ProductList?p_id=${P_Id}`)
+        axios.get(`${base_url}/ProductDesc?p_id=${P_Id}`)
 
             .then((res) => {
                 console.log('API Response:', res.data);
@@ -36,16 +36,11 @@ const ListingLogic = () => {
 
     return (
         <>
-            {/* <div className='row'>
+            <div className='row'>
                 <div id="mainListing">
-                   <div id="filter">
-                        <CostFilter p_id={P_Id}
-                            restPerCost={(data) => { setDataPerFilter(data) }} />
-                    </div> 
                     <ListingDisplay listData={restList} />
                 </div>
-            </div> */}
-            <ListingDisplay listData={restList} />
+            </div>
 
         </>
     )

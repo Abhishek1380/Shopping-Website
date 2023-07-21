@@ -11,21 +11,26 @@ const ListingDisplay = (props) => {
 
 
 
-                        <Link to={`/Listing_page/${item.ProductSpec_id}`} >
-                            < div className="section" key={item._id}>
+                        <Link to={`/details?SpecId=${item.ProductSpec_id}`} >
+
+                            <div className="section">
                                 <div className="sec">
                                     <div className="logo">
                                         <img src={item.image} alt="Food Image" />
                                     </div>
                                     <div className="sec-2">
                                         <h2>AMA Cafe</h2>
-                                        <p>BenQ EW 23.8 inch Full HD LED Backlit IPS Panel Built-in Speakers, Blue Light Filter, Wall Mountable, Tilt Adjustment, Flicker-Free Monitor (EW2480)</p>
-                                        <p>Review: Average</p>
-                                        <p>Price: Rs.450</p>
-                                        <p>Ratings: 345</p>
+                                        <p>
+                                            {item.name}
+                                        </p>
+                                        <p>Review :{item.review}</p>
+                                        <p>Rating:{item.rating}</p>
+                                        <p>Price{item.p_price}</p>
                                     </div>
                                 </div>
                             </div>
+
+
                         </Link >
 
 
@@ -55,6 +60,7 @@ const ListingDisplay = (props) => {
             <div className='cuisine'>
                 {renderData(props)}
             </div>
+
 
 
         );

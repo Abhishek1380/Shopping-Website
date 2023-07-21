@@ -16,7 +16,7 @@ const PlaceOrders = () => {
         id: Math.floor(Math.random() * 100000),
         name: '',
         email: '',
-        product: '',
+        product: params.product_name,
         cost: Math.floor(Math.random() * 1000),
         phone: '',
         address: "Hno 12 Sec 34",
@@ -41,7 +41,7 @@ const PlaceOrders = () => {
             },
             body: JSON.stringify(values)
         })
-            .then(() => navigate(`/viewOrder`));
+            .then(() => navigate(`/JustOrder`));
     };
 
     return (
@@ -51,7 +51,7 @@ const PlaceOrders = () => {
                     <h2>Place Your Order</h2>
                     <form>
                         <div className="form-group">
-                            <input type="text" id="name" name="name" placeholder="Name" required onChange={handleInputChange} />
+                            <input type="text" id="name" name="name" style={{ fontFamily: 'Arial, sans-serif' }} placeholder="Name" required onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
                             <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required onChange={handleInputChange} />
@@ -63,7 +63,7 @@ const PlaceOrders = () => {
                             <input type="text" id="cost" name="cost" placeholder="Product Cost" required onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
-                            <input type="text" id="product" name="product" placeholder="Product Name" required onChange={handleInputChange} />
+                            <input type="text" id="product" name="product" placeholder={params.product_name} required onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
                             <input type="text" id="address" name="address" placeholder="Address" required onChange={handleInputChange} />

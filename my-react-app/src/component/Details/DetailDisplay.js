@@ -8,99 +8,22 @@ import { Link } from 'react-router-dom';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import Header from '../Header';
 
-const base_url = "http://127.0.0.1:6006";
-
-// const DetailDisplay = () => {
-
-//     let navigate = useNavigate()
-//     let [searchParams] = useSearchParams()
-//     let [restDetails, setrestDetails] = useState()
-//     // let [category_id] = useState(sessionStorage.getItem('categoryId'))
-
-
-//     let P_id = searchParams.getAll('productSpec_id');
-//     const restDetail = async () => {
-//         const rdata = await axios.get(`${base_url}/product_desc/${P_id}`);
-//         setrestDetails(rdata.data[0])
-//     }
-
-//     useEffect(() => {
-
-//         restDetail()
-//     }, [])
-
-//     // const proceed = () => {
-//     //     navigate(`/placeOrder/${restDetails.restaurant_name}`)
-//     // }
-
-//     const renderDetails = () => {
-//         if (restDetails) {
-//             return (
-//                 <>
-//                     <Header />
-//                     <div className="detail">
-//                         <div className="detail_1">
-//                             <div className="div_img">
-//                                 <img src={renderDetails.img} alt="img" />
-//                             </div>
-//                         </div>
-//                         <div className="detail_2">
-//                             <div className="detail_22">
-//                                 <h2>{renderDetails.name}</h2>
-//                                 <p className="rating">Rating:{renderDetails.rating}</p>
-//                                 <div className="specs">
-//                                     <p className="rating">Specifications:</p>
-//                                     <ul>
-//                                         <li className="specs">Warranty: 3 Years</li>
-//                                         <li className="specs">Panel-Type: IPS Panel</li>
-//                                         <li className="specs">HDMI-Ports: 3</li>
-//                                         <li className="specs">Battery: 8hrs</li>
-//                                     </ul>
-//                                     <p className="rating">Price: 11,200Rs</p>
-//                                     {/* <Link className="btn" to={`/Listing/${categoty_id}`} >Back</Link>
-//                                     <button className="btn-detail" onClick={proceed}>Proceed</button> */}
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </div>
-
-
-
-
-
-
-//                 </>
-//             )
-//         }
-//     }
-
-
-//     return (
-//         <>
-
-//             {renderDetails()}
-
-//         </>
-//     )
-// }
-
-// export default DetailDisplay;
-
+const base_url = "http://127.0.0.1:9001";
 
 const DetailDisplay = () => {
     let navigate = useNavigate();
     let [searchParams] = useSearchParams();
     let [restDetails, setRestDetails] = useState();
-    let [category_id] = useState(sessionStorage.getItem('categoryId'))
+    let [p_id] = useState(sessionStorage.getItem('p_Id'))
 
-    // let P_id = searchParams.getAll('productSpec_id');
+    //  let P_id = searchParams.getAll('productSpec_id');
     let params = useParams();
-    let P_id = params.productSpec_id;
+    let SpecId = params.productSpec_id;
     const fetchRestDetails = async () => {
         try {
 
-            const response = await axios.get(`${base_url}/details?productSpec_id=${P_id}`);
-            setRestDetails(response.data[2]);
+            const response = await axios.get(`${base_url}/ProductList11?productSpec_id=${SpecId}`);
+            setRestDetails(response.data[0]);
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -117,32 +40,33 @@ const DetailDisplay = () => {
         if (restDetails) {
             return (
                 <>
-                    <Header />
-                    <div className="detail">
-                        <div className="detail_1">
-                            <div className="div_img">
+                    <div class="detail">
+                        <div class="detail_1">
+                            <div class="div_img">
                                 <img src={restDetails.img} alt="img" />
                             </div>
                         </div>
-                        <div className="detail_2">
-                            <div className="detail_22">
+                        <div class="detail_2">
+                            <div class="detail_22">
                                 <h2>{restDetails.name}</h2>
-                                <p className="rating">Rating: {restDetails.rating}</p>
-                                <div className="specs">
-                                    <p className="rating">Specifications:</p>
+                                <p class="rating">Rating: {restDetails.rating}</p>
+                                <p class="specs">({renderDetails.reviews} Reviews & Comments)</p>
+                                <div class="specs">
+                                    <p class="rating">Specifications:</p>
                                     <ul>
-                                        <li className="specs">Warranty: 3 Years</li>
-                                        <li className="specs">Panel-Type: IPS Panel</li>
-                                        <li className="specs">HDMI-Ports: 3</li>
-                                        <li className="specs">Battery: 8hrs</li>
+                                        <li class="specs">Warranty:{restDetails.warranty}</li>
+                                        <li class="specs">Delivery:{restDetails.delivery}</li>
+                                        <li class="specs">Bank Offer:{restDetails.bank_offer}</li>
                                     </ul>
-                                    <p className="rating">Price: 11,200 Rs</p>
-                                    <Link className="btn" to={`/Listing/${category_id}`}>Back</Link>
-                                    <button className="btn-detail" onClick={proceed}>Proceed</button>
+                                    <p class="rating">Price: {restDetails.price}Rs</p>
+                                    <Link className="btn btn-danger"
+                                        to={`/listing/${p_id}`}>Back</Link>
+                                    <button class="btn-detail" onClick={proceed}>Proceed</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </>
             );
         }
@@ -156,3 +80,6 @@ const DetailDisplay = () => {
     );
 };
 export default DetailDisplay;
+
+
+

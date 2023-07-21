@@ -94,6 +94,32 @@ app.get('/product_desc', async (req, res) => {
     let output = await getData(collection, query);
     res.send(output);
 })
+
+
+
+app.get('/productList11', async (req, res) => {
+    let query = {};
+    let collection = "ProductList11";
+    let output = await getData(collection, query);
+    res.send(output);
+})
+
+app.get('/productList11/:p_id', async (req, res) => {
+    let P_id = Number(req.params.p_id);
+    let query = { p_id: P_id };
+    let collection = "ProductList11";
+    let output = await getData(collection, query);
+    res.send(output);
+})
+
+
+
+
+
+
+
+
+
 app.get('/orders', async (req, res) => {
     let query = {};
     // if (req.query.email) {
