@@ -272,7 +272,6 @@
         "Bank Offer": "NA",
         "img": "https://i.ibb.co/C7QY9sy/butter5.webp"
     },
-    ,
     {
         "category_id": 2,
         "p_id": 5,
@@ -286,7 +285,6 @@
         "Bank Offer": "NA",
         "img": "https://i.ibb.co/3MRc3Ft/butter4.webp"
     },
-    ,
     {
         "category_id": 2,
         "p_id": 5,
@@ -300,7 +298,6 @@
         "Bank Offer": "NA",
         "img": "https://i.ibb.co/R3j83mM/butter3.webp"
     },
-    ,
     {
         "category_id": 2,
         "p_id": 5,
@@ -314,7 +311,6 @@
         "Bank Offer": "NA",
         "img": "https://i.ibb.co/tJcyLDV/butter2.webp"
     },
-    ,
     {
         "category_id": 2,
         "p_id": 5,
@@ -341,7 +337,6 @@
         "Bank Offer": "NA",
         "img": "https://i.ibb.co/BL7BCNc/E-5.webp"
     },
-    ,
     {
         "category_id": 2,
         "p_id": 6,
@@ -355,7 +350,6 @@
         "Bank Offer": "NA",
         "img": "https://i.ibb.co/yNcZ46R/E-4.webp"
     },
-    ,
     {
         "category_id": 2,
         "p_id": 6,
@@ -397,53 +391,196 @@
     },
     {
         "category_id": 2,
-        "p_id": 1,
-        "productSpec_id": 1,
-        "name": "",
-        "rating": ,
-        "reviews": ,
-        "warranty": "",
-        "p_price": "",
+        "p_id": 7,
+        "productSpec_id": 31,
+        "name": "dreamexpo Baby Shower Cap Child Kids Shampoo Bath Shower Cap Hat Wash Hair Shield for Kids Head.",
+        "rating": 4.2,
+        "reviews": 947,
+        "warranty": "NA",
+        "p_price": 599,
         "delivery": "Free",
         "Bank Offer": "NA",
-        "img": ""
+        "img": "https://i.ibb.co/w7W727d/baby-5.webp"
     },
     {
         "category_id": 2,
-        "p_id": 1,
-        "productSpec_id": 1,
-        "name": "",
-        "rating": ,
-        "reviews": ,
-        "warranty": "",
-        "p_price": "",
+        "p_id": 7,
+        "productSpec_id": 32,
+        "name": "vapo Kids Head. Baby Shower Cap Child Bath Shower Cap Hat Wash Hair Shield for",
+        "rating": 4.6,
+        "reviews": 1599,
+        "warranty": "NA",
+        "p_price": 2999,
         "delivery": "Free",
         "Bank Offer": "NA",
-        "img": ""
+        "img": "https://i.ibb.co/xJ2VczW/baby-4.webp"
     },
     {
         "category_id": 2,
-        "p_id": 1,
-        "productSpec_id": 1,
-        "name": "",
-        "rating": ,
-        "reviews": ,
-        "warranty": "",
-        "p_price": "",
+        "p_id": 7,
+        "productSpec_id": 33,
+        "name": "vapo Kids Head. Baby Shower Cap Child Bath Shower Cap Hat Wash Hair Shield for",
+        "rating": 4.1,
+        "reviews": 345,
+        "warranty": "NA",
+        "p_price": 3299,
         "delivery": "Free",
         "Bank Offer": "NA",
-        "img": ""
+        "img": "https://i.ibb.co/pyPxfZB/baby-3.webp"
     },
     {
         "category_id": 2,
-        "p_id": 1,
-        "productSpec_id": 1,
-        "name": "",
-        "rating": ,
-        "reviews": ,
-        "warranty": "",
-        "p_price": "",
+        "p_id": 7,
+        "productSpec_id": 34,
+        "name": "Safe-o-kid Anti-Slip Soft Body Cushion Digital Bath Tub for Newborn-Suitable Age 0-3 Years  (Blue)",
+        "rating": 4.1,
+        "reviews": 345,
+        "warranty": "6 Monthes",
+        "p_price": 1899,
         "delivery": "Free",
         "Bank Offer": "NA",
-        "img": ""
+        "img": "https://i.ibb.co/92q08rf/baby-2.webp"
     },
+    {
+        "category_id": 2,
+        "p_id": 7,
+        "productSpec_id": 35,
+        "name": "Modinity Adjustable Safe Soft Bathing Baby Shower Hair Wash Cap Children, Baby Bath Cap",
+        "rating": 3.6,
+        "reviews": 23,
+        "warranty": "NA",
+        "p_price": 999,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/qFQWKsV/baby-1.webp"
+    },
+    {
+        "category_id": 2,
+        "p_id": 8,
+        "productSpec_id": 36,
+        "name": "BOSCH F002H23763 Fusion Synthetic Blend Engine Oil  (3.5 L, Pack of 1)",
+        "rating": 4.1,
+        "reviews": 493,
+        "warranty": "NA",
+        "p_price": 1699,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/9HzmGFt/L-5.webp"
+    },
+    {
+        "category_id": 2,
+        "p_id": 8,
+        "productSpec_id": 37,
+        "name": "Gulf MULTI CNG 20W40 4 Wheeler Passenger Car High Performance Engine Oil  (3.5 L)",
+        "rating": 4.2,
+        "reviews": 45,
+        "warranty": "NA",
+        "p_price": 2899,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/18MfWLM/L-4.webp"
+    },
+    {
+        "category_id": 2,
+        "p_id": 8,
+        "productSpec_id": 38,
+        "name": "3M 2 wheeler Engine Oil Flush 3M 2 wheeler Engine Oil Flush Synthetic Blend Engine Oil  (0.05 L)",
+        "rating": 4.9,
+        "reviews": 308,
+        "warranty": "NA",
+        "p_price": 3999,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/bWbcp4M/L-3.webp"
+    },
+    {
+        "category_id": 2,
+        "p_id": 8,
+        "productSpec_id": 39,
+        "name": "Gulf MULTI G+ 20W50 4 Wheeler Passenger Car High Performance Engine Oil  (500 ml)",
+        "rating": 4.8,
+        "reviews": 982,
+        "warranty": "NA",
+        "p_price": 1899,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/SyTY1c4/L-1.webp"
+    },
+    {
+        "category_id": 2,
+        "p_id": 8,
+        "productSpec_id": 40,
+        "name": "Castrol Magnatec STOP-START 5W-30 API SN Full Synthetic Full-Synthetic Engine Oil  (3.5 L, Pack of 1)",
+        "rating": 4.1,
+        "reviews": 384,
+        "warranty": "NA",
+        "p_price": 2699,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/k2zB08f/L-2.webp"
+    },
+    {
+        "category_id": 3,
+        "p_id": 9,
+        "productSpec_id": 41,
+        "name": "Trending Day & Date Functioning for Boys Analog Watch - For Boys LCS-8246",
+        "rating": 4.1,
+        "reviews": 382,
+        "warranty": "1 Year",
+        "p_price": 999,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/ftckpm9/watch-5.webp"
+    },
+    {
+        "category_id": 3,
+        "p_id": 9,
+        "productSpec_id": 42,
+        "name": "Bleed Blue Day and Date Functioning Strap Adult Quartz Analog Watch - For Men LS2821",
+        "rating": 4.5,
+        "reviews": 958,
+        "warranty": "2 Year",
+        "p_price": 1999,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/pPmDmZX/watch-4.webp"
+    },
+    {
+        "category_id": 3,
+        "p_id": 9,
+        "productSpec_id": 43,
+        "name": "Digital Stylish Sports Day and Date Kids Watch Sports Multifunctional Digital Watch - For Men Sports Multifunctional Dual Time Digital Black Dial Men's Watch Green Strap",
+        "rating": 3.6,
+        "reviews": 498,
+        "warranty": "1 year",
+        "p_price": 2599,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/jVmhHNK/watch-3.webp"
+    },
+    {
+        "category_id": 3,
+        "p_id": 9,
+        "productSpec_id": 44,
+        "name": "latest trending digital LED smart band watch for Boys, Girls, Men, Women, Kids, Digital Watch - For Boys & Girls ED620-Square LED Digital Display (Pack of 3) BUY 3 PAY FOR 2, Most selling",
+        "rating": 4.9,
+        "reviews": 23,
+        "warranty": "3 Years",
+        "p_price": 6999,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/JrNP9Gc/watch-2.webp"
+    },
+    {
+        "category_id": 3,
+        "p_id": 9,
+        "productSpec_id": 45,
+        "rating": 3.2,
+        "reviews": 82,
+        "warranty": "NA",
+        "p_price": 599,
+        "delivery": "Free",
+        "Bank Offer": "NA",
+        "img": "https://i.ibb.co/bd1PMwW/watch-1.webp"
+    }
+]

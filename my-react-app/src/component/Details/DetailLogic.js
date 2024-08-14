@@ -1,41 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 import './detail.css';
-import DetailDisplay from './DetailDisplay'
+import DetailDisplay from './DetailDisplay';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
-const base_url = "http://127.0.0.1:6006";
+const base_url = "http://127.0.0.1:9002";
 
 const DetailLogic = () => {
-
     let params = useParams();
-    const [restDetails, setrestDetails] = useState();
-    let P_id = params.productSpec_id;
+    const [restDetails, setRestDetails] = useState(null); // Initialize as null
+    let ProductSpec_id = params.productSpec_id;
 
     useEffect(() => {
+        const fetchDetails = async () => {
+            try {
+                const response = await axios.get(`${base_url}/details/${ProductSpec_id}`);
+                setRestDetails(response.data[0]);
+                console.log(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
 
-        axios.get(`${base_url}/details?productSpec_id=${P_id}`)
-            .then((res) => {
-                setrestDetails(res.data[1]);
-                console.log(res.data);
-            })
-
-    }, [])
-    // }, [])
+        fetchDetails();
+    }, [ProductSpec_id]); // Add productSpec_id as a dependency
 
     return (
         <>
-
-            {/* <div class="fashion_section_1">
-                <h2>Best of Electronics</h2>
-                <p>9 Items</p>
-                <button class="	fa fa-moon-o" onclick="changeMode()"></button>
-            </div>
-
-            <hr /> */}
             <DetailDisplay listData1={restDetails} />
         </>
-    )
-}
+    );
+};
+
 export default DetailLogic;

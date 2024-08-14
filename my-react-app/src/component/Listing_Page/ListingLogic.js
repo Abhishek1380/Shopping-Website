@@ -1,24 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 import './Listing.css';
-import ListingDisplay from './ListingDisplay'
+import ListingDisplay from './ListingDisplay';
 import axios from 'axios';
-import CostFilter from '../filters/costFilter';
 
-const base_url = "http://127.0.0.1:9001";
+const base_url = "http://127.0.0.1:9002";
 
 const ListingLogic = () => {
-
-    let params = useParams();
-    const [restList, setRestList] = useState();
-    let P_Id = params.p_id;
+    const params = useParams();
+    const [restList, setRestList] = useState([]);
+    const P_Id = params.p_id;
 
     useEffect(() => {
-
-        sessionStorage.setItem('p_id', P_Id);
-
-        axios.get(`${base_url}/ProductDesc?p_id=${P_Id}`)
-
+        axios.get(`${base_url}/ProductList1/${P_Id}`)
             .then((res) => {
                 console.log('API Response:', res.data);
                 setRestList(res.data);
@@ -26,23 +20,17 @@ const ListingLogic = () => {
             .catch((error) => {
                 console.log('API Error:', error);
             });
-    }, [P_Id])
+    }, [P_Id]);
 
     console.log('restList:', restList);
 
-    const setDataPerFilter = (data) => {
-        setRestList(data)
-    }
-
     return (
-        <>
-            <div className='row'>
-                <div id="mainListing">
-                    <ListingDisplay listData={restList} />
-                </div>
+        <div className='row'>
+            <div id="mainListing">
+                <ListingDisplay listData={restList} />
             </div>
-
-        </>
-    )
+        </div>
+    );
 }
+
 export default ListingLogic;

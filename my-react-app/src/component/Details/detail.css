@@ -2,11 +2,12 @@
     width: 100%;
     display: flex;
     margin: auto;
-    height: 67vh;
+    height: 84vh;
+    padding-top: 33px;
 }
 
 img {
-    width: 100%;
+    width: 77%;
 }
 
 .div_img {
@@ -18,13 +19,14 @@ img {
 
 .detail_1 {
     width: 40%;
-    /* background-color: aquamarine; */
+    background-color: #fff;
 }
 
 .detail_2 {
     width: 60%;
     background-color: aliceblue;
     line-height: 2rem;
+    padding: 24px;
 }
 
 .rating {
@@ -39,10 +41,12 @@ img {
     font-family: sans-serif;
 }
 
-.btn-detail {
+
+
+.btn {
     font-size: 20px;
     padding: 10px 40px;
-    background-color: #19845324;
+    background-color: #3cc25224 !important;
     border-radius: 14px;
     font-family: sans-serif;
     cursor: pointer;

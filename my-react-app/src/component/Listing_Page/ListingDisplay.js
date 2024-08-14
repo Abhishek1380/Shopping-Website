@@ -2,70 +2,34 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ListingDisplay = (props) => {
-    const renderData = ({ listData }) => {
-        if (listData) {
-            if (listData.length > 0) {
-                return listData.map((item) => {
-                    return (
+    const { listData } = props;
 
-
-
-
-                        <Link to={`/details?SpecId=${item.ProductSpec_id}`} >
-
-                            <div className="section">
-                                <div className="sec">
-                                    <div className="logo">
-                                        <img src={item.image} alt="Food Image" />
-                                    </div>
-                                    <div className="sec-2">
-                                        <h2>AMA Cafe</h2>
-                                        <p>
-                                            {item.name}
-                                        </p>
-                                        <p>Review :{item.review}</p>
-                                        <p>Rating:{item.rating}</p>
-                                        <p>Price{item.p_price}</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </Link >
-
-
-
-
-                    )
-                })
-            } else {
-                return (
-                    <h2>No Data Found</h2>
-                )
-            }
-            // } else {
-            //     return (
-            //         <div>
-            //             <h2>Loading</h2>
-            //             <img src="/images/loader.gif" alt="loader" />
-            //         </div>
-            //     )
-            // }
-        }
-
-        return (
-
-
-
-            <div className='cuisine'>
-                {renderData(props)}
-            </div>
-
-
-
-        );
+    if (!listData || listData.length === 0) {
+        return <h2>No Data Found</h2>;
     }
-}
 
+    return (
+        <div className='cuisine'>
+            {listData.map((item) => (
+                <div className="section" key={item._id}>
+                    <Link to={`/details/${item.productSpec_id}`}>
+                        <div className="sec">
+                            <div className="logo">
+                                <img src={item.img} alt="Food Image" />
+                            </div>
+                            <div className="sec-2">
+                                <h2>AMA Cafe</h2>
+                                <p>{item.name}</p>
+                                <p>Review: {Array.isArray(item.review) && item.review[1] ? item.review[1] : 'No Review'}</p>
+                                <p>Rating: {item.rating}</p>
+                                <p>Price: {item.p_price}</p>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            ))}
+        </div>
+    );
+};
 
 export default ListingDisplay;

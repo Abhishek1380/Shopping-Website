@@ -18,16 +18,16 @@ const Header = () => {
     //             console.log(location);
     //         })
     // }, [])
-    useEffect(() => {
-        fetch(`${base_url}/location`, { method: 'GET' })
-            .then((res) => res.json())
-            .then((data) => {
-                setLocation(data);
-            })
-            .catch((error) => {
-                console.error('Error fetching data:', error);
-            });
-    }, []);
+    // useEffect(() => {
+    //     fetch(`${base_url}/location`, { method: 'GET' })
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             setLocation(data);
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error fetching data:', error);
+    //         });
+    // }, []);
 
     const renderItem = (data) => {
         if (data) {

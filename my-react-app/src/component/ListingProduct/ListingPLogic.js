@@ -4,7 +4,7 @@ import './ListingProduct.css';
 import ListingPDisplay from './ListingPDisplay';
 import axios from 'axios';
 
-const base_url = "http://127.0.0.1:6005";
+const base_url = "http://127.0.0.1:9001";
 
 const ListingPLogic = () => {
     let params = useParams();
