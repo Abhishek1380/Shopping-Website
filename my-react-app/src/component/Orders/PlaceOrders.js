@@ -3,7 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 // import Header from '../Header';
 import './PlaceOrders.css';
 
-const url = "http://localhost:9002/PlaceOrders";
+const base_url = process.env.REACT_APP_BASE_URL;
+const url = `${base_url}/PlaceOrders`;
+
 
 const PlaceOrders = () => {
     let params = useParams();

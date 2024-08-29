@@ -4,7 +4,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import './detail.css';
 import Header from '../Header'; // Ensure Header is imported if needed
 
-const base_url = "http://127.0.0.1:9002";
+const base_url = process.env.REACT_APP_BASE_URL;
 
 const DetailDisplay = () => {
     let navigate = useNavigate();

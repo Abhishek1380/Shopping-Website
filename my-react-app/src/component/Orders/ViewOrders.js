@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import DisplayOrder from './DisplayOrders';
 
-
-const url = "http://localhost:9002/orders";
+const base_url = process.env.REACT_APP_BASE_URL;
+const url = `${base_url}/orders`;
 
 const ViewOrders = () => {
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const url = "http://localhost:9001/orders";
+const base_url = process.env.REACT_APP_BASE_URL;
+const url = `${base_url}/orders`;
 
 const JustOrder = () => {
     const [orders, setOrder] = useState();

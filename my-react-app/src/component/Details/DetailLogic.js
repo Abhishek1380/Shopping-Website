@@ -4,7 +4,7 @@ import './detail.css';
 import DetailDisplay from './DetailDisplay';
 import axios from 'axios';
 
-const base_url = "http://127.0.0.1:9002";
+const base_url = process.env.REACT_APP_BASE_URL;
 
 const DetailLogic = () => {
     let params = useParams();
