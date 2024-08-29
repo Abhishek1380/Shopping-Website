@@ -9,24 +9,24 @@ const base_url = "http://127.0.0.1:9002";
 const DetailDisplay = () => {
     let navigate = useNavigate();
     let [restDetails, setRestDetails] = useState(null);
-    let [error, setError] = useState(null); // Added error state
+    let [error, setError] = useState(null);
     let params = useParams();
-    let ProductSpec_id = params.productSpec_id; // Use ProductSpec_id consistently
+    let ProductSpec_id = params.productSpec_id;
 
     const fetchRestDetails = async () => {
         try {
             const response = await axios.get(`${base_url}/details/${ProductSpec_id}`);
             setRestDetails(response.data[0]);
-            setError(null); // Clear previous errors if data is fetched successfully
+            setError(null);
         } catch (error) {
-            setError('Failed to fetch details. Please try again later.'); // Set error message
+            setError('Failed to fetch details. Please try again later.');
             console.error('Error fetching data:', error);
         }
     };
 
     useEffect(() => {
         fetchRestDetails();
-    }, [ProductSpec_id]); // Use ProductSpec_id
+    }, [ProductSpec_id]);
 
     const proceed = () => {
         if (restDetails) {
@@ -34,46 +34,44 @@ const DetailDisplay = () => {
         }
     };
 
-    const renderDetails = () => {
-        if (error) {
-            return <p>{error}</p>; // Display error message if there's an error
-        }
-        if (restDetails) {
-            return (
-                <div className="detail">
-                    {/* Include Header if needed */}
-                    <div className="detail_1">
-                        <div className="div_img">
-                            <img src={restDetails.img} alt="Food Image" />
+    if (error) {
+        return <p>{error}</p>;
+    }
+
+    if (!restDetails) {
+        return <p>Loading...</p>;
+    }
+
+    return (
+        <>
+            {/* Include Header if needed */}
+            <div className="card detail-card">
+                <div className="card-body">
+                    <div className="detail-card__container">
+                        <div className="detail-card__image">
+                            <img src={restDetails.img} alt={restDetails.name} />
                         </div>
-                    </div>
-                    <div className="detail_2">
-                        <div className="detail_22">
-                            <h2>{restDetails.name}</h2>
-                            <p className="rating">Rating: {restDetails.rating}</p>
-                            <p className="specs">({restDetails.reviews} Reviews & Comments)</p>
-                            <div className="specs">
-                                <p className="rating">Specifications:</p>
+                        <div className="detail-card__content">
+                            <h1 className="detail-card__title">{restDetails.name}</h1>
+                            <p className="detail-card__rating">Rating: {restDetails.rating} ⭐</p>
+                            <p className="detail-card__reviews">({restDetails.reviews} Reviews & Comments)</p>
+                            <div className="detail-card__specs">
+                                <h2>Specifications:</h2>
                                 <ul>
-                                    <li className="specs">Warranty: {restDetails.warranty}</li>
-                                    <li className="specs">Delivery: {restDetails.delivery}</li>
-                                    <li className="specs">Bank Offer: {restDetails.bank_offer}</li>
+                                    <li>Warranty: {restDetails.warranty}</li>
+                                    <li>Delivery: {restDetails.delivery}</li>
+                                    <li>Bank Offer: {restDetails.bank_offer || 'NA'}</li>
                                 </ul>
-                                <p className="rating">Price: {restDetails.price} Rs</p>
-                                <Link className="btn btn-danger" to={`/listing/${ProductSpec_id}`}>Back</Link>
-                                <button className="btn-detail" onClick={proceed}>Proceed</button>
+                                <p className="detail-card__price">Price: ₹{restDetails.p_price}</p>
+                            </div>
+                            <div className="detail-card__actions">
+                                <Link className="btn btn-primary" to={`/listing/${ProductSpec_id}`}>Back</Link>
+                                <button className="btn btn-danger" onClick={proceed}>Proceed</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            );
-        }
-        return <p>Loading...</p>; // Handle loading state or fallback
-    };
-
-    return (
-        <>
-            {renderDetails()}
+            </div>
         </>
     );
 };

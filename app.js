@@ -5,6 +5,8 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 
+
+
 let app = express();
 const port = process.env.PORT || 9002;
 
@@ -26,18 +28,6 @@ app.get('/', (req, res) => {
     console.log('Message sent');
 })
 
-// app.get('/category', async (req, res) => {
-//     let query = {};
-//     let collection = "category";
-//     let output = await getData(collection, query);
-//     res.send(output);
-// })
-// app.get('/details', async (req, res) => {
-//     let query = {};
-//     let collection = "details";
-//     let output = await getData(collection, query);
-//     res.send(output);
-// })
 app.get('/ProductList', async (req, res) => {
     let query = {};
     let collection = "ProductDesc";
@@ -63,23 +53,6 @@ app.get('/ProductList3', async (req, res) => {
     res.send(output);
 })
 
-// app.get('/ProductList11', async (req, res) => {
-//     let query = {};
-//     if (req.query.P_id) {
-//         query = { "p_id": Number(req.query.P_id) }
-//     }
-//     let collection = "ProductDesc"
-//     let output = await getData(collection, query)
-//     res.send(output);
-// })
-
-
-
-
-
-
-
-
 app.get('/ProductDesc', async (req, res) => {
     let Pip_id = Number(req.query.p_id);
     let query = { p_id: Pip_id };
@@ -96,22 +69,6 @@ app.get('/ProductDesc', async (req, res) => {
 })
 
 
-
-
-
-
-
-// app.get('/ProductList/:p_id', async (req, res) => {
-
-//     const P_Id = Number(req.params.p_id);
-
-//     const query = { p_id: P_Id };
-//     const collection = "ProductList";
-
-//     const output = await getData(collection, query);
-//     res.send(output);
-
-// })
 
 app.get('/ProductDesc/:p_id', async (req, res) => {
     let P_id = Number(req.params.p_id);
@@ -140,97 +97,14 @@ app.get('/ProductList1/:productSpec_id', async (req, res) => {
 })
 
 
-
-// app.get('/details', async (req, res) => {
-//     let Pip_id = Number(req.params.productSpec_id);
-//     let query = { productSpec_id: Pip_id };
-//     let collection = "ProductDesc";
-//     let output = await getData(collection, query);
-//     res.send(output);
-// })
 app.get('/details/:productSpec_id', async (req, res) => {
-    let Pip_id = Number(req.params.productSpec_id); // Correct usage
+    let Pip_id = Number(req.params.productSpec_id);
     let query = { productSpec_id: Pip_id };
     let collection = "ProductDesc";
     let output = await getData(collection, query);
     res.send(output);
 });
 
-
-// app.get('/ProductDesc/:productSpec_id', async (req, res) => {
-//     let ProductSpec_id = Number(req.params.productSpec_id);
-//     let query = { productSpec_id: ProductSpec_id };
-//     let collection = "ProductDesc";
-//     let output = await getData(collection, query);
-//     res.send(output[1])
-// })
-
-
-// app.get('/ProductList11', async (req, res) => {
-//     let Pip_id = Number(req.query.p_id);
-//     let query = { p_id: Pip_id };
-//     let collection = "ProductDesc";
-//     let output = await getData(collection, query);
-//     res.send(output);
-// });
-
-// app.get('/details/:productSpec_id', async (req, res) => {
-//     let productSpec_id = Number(req.params.productSpec_id);
-//     let query = { productSpec_id: productSpec_id };
-//     let collection = "ProductDesc";
-//     let output = await getData(collection, query);
-//     res.send(output)
-// })
-
-
-
-
-
-
-// app.get('/productList11', async (req, res) => {
-//     let query = {};
-//     let collection = "ProductList11";
-//     let output = await getData(collection, query);
-//     res.send(output);
-// })
-
-
-
-
-
-// app.get('/productList11/:id', async (req, res) => {
-//     let P_id = Number(req.params.id);
-//     let query = { p_id: Id };
-//     let collection = "ProductList11";
-//     let output = await getData(collection, query);
-//     res.send(output);
-// })
-// app.get('/ProductList11', async (req, res) => {
-//     // let P_id = Number(req.params.p_id);
-//     let query = { "p_id": Number(req.query.p_id) };
-//     let collection = "ProductList11";
-//     let output = await getData(collection, query);
-//     res.send(output);
-// })
-
-
-// app.get('/ProductList11', async (req, res) => {
-//     let query = {};
-//     if (req.query.categoryid) {
-//         query = { category_id: Number(req.query.categoryid) }
-//     }
-//     else if (req.query.productid) {
-
-//         query = { "p_id": Number(req.query.productid) }
-//     }
-
-//     else {
-//         query = {}
-//     }
-//     let collection = "ProductList11"
-//     let output = await getData(collection, query)
-//     res.send(output);
-// })
 
 app.get('/filter/:productSpec_id', async (req, res) => {
     let id = req.params.id;

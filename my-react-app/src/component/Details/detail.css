@@ -1,53 +1,114 @@
-.detail {
-    width: 100%;
+.detail-card {
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.detail-card__container {
     display: flex;
-    margin: auto;
-    height: 84vh;
-    padding-top: 33px;
+    align-items: flex-start;
 }
 
-img {
-    width: 77%;
+.detail-card__image {
+    flex: 1;
+    max-width: 400px;
 }
 
-.div_img {
-    width: 87%;
-    height: 50vh;
-    margin: auto;
-    padding: 8px;
+.detail-card__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-.detail_1 {
-    width: 40%;
-    background-color: #fff;
+.detail-card__content {
+    flex: 2;
+    padding: 20px;
 }
 
-.detail_2 {
-    width: 60%;
-    background-color: aliceblue;
-    line-height: 2rem;
-    padding: 24px;
+.detail-card__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.rating {
-    font-size: 1.4rem;
-    font-weight: 600;
-    font-family: sans-serif;
-    line-height: 10px;
+.detail-card__rating,
+.detail-card__reviews,
+.detail-card__price {
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
-.specs {
-    font-size: 1.3rem;
-    font-family: sans-serif;
+.detail-card__specs {
+    margin: 20px 0;
 }
 
+.detail-card__specs h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
 
+.detail-card__specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-card__specs li {
+    margin: 5px 0;
+}
+
+.detail-card__actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
 
 .btn {
-    font-size: 20px;
-    padding: 10px 40px;
-    background-color: #3cc25224 !important;
-    border-radius: 14px;
-    font-family: sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
     cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .detail-card {
+        margin: 10px;
+    }
+
+    .detail-card__container {
+        flex-direction: column;
+    }
+
+    .detail-card__image,
+    .detail-card__content {
+        max-width: 100%;
+    }
+
+    .detail-card__title {
+        font-size: 1.5rem;
+    }
 }

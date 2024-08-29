@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Header from '../Header';
+// import Header from '../Header';
 import './PlaceOrders.css';
 
 const url = "http://localhost:9002/PlaceOrders";
@@ -29,7 +29,7 @@ const PlaceOrders = () => {
     };
 
     const checkout = (e) => {
-        e.preventDefault(); // Prevent form submission default behavior
+        e.preventDefault();
         console.log('Placing order with values:', values);
         fetch(url, {
             method: 'POST',
@@ -39,69 +39,67 @@ const PlaceOrders = () => {
             },
             body: JSON.stringify(values),
         })
-            .then((response) => {
-                console.log('Fetch response:', response);
-                return response.text();  // Read the response as text first
-            })
+            .then((response) => response.text())
             .then((text) => {
-                console.log('Response text:', text);
                 if (text) {
-                    return JSON.parse(text);  // Parse JSON only if the response text isn't empty
+                    return JSON.parse(text);
                 } else {
                     throw new Error("Received an empty response from the server");
                 }
             })
             .then((data) => {
-                console.log('Parsed JSON response:', data);
                 navigate(`/ViewOrders`);
             })
             .catch((error) => {
                 console.error('Error placing order:', error);
                 alert(`There was an issue placing your order: ${error.message}`);
             });
-
     };
 
     return (
         <div className="containerForm">
-            <div className="contain1">
+
+            <div className="form-container">
                 <h2>Place Your Order</h2>
-                <form onSubmit={checkout}>
+                <form onSubmit={checkout} className="order-form">
                     <div className="form-group">
+                        <label htmlFor="name">Name</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
-                            placeholder="Name"
+                            placeholder="Enter your name"
                             required
                             onChange={handleInputChange}
                             value={values.name}
-                            style={{ fontFamily: 'Arial, sans-serif' }}
                         />
                     </div>
                     <div className="form-group">
+                        <label htmlFor="phone">Mobile Number</label>
                         <input
                             type="tel"
                             id="phone"
                             name="phone"
-                            placeholder="Mobile Number"
+                            placeholder="Enter your mobile number"
                             required
                             onChange={handleInputChange}
                             value={values.phone}
                         />
                     </div>
                     <div className="form-group">
+                        <label htmlFor="email">Email</label>
                         <input
                             type="email"
                             id="email"
                             name="email"
-                            placeholder="Email"
+                            placeholder="Enter your email"
                             required
                             onChange={handleInputChange}
                             value={values.email}
                         />
                     </div>
                     <div className="form-group">
+                        <label htmlFor="cost">Product Cost</label>
                         <input
                             type="text"
                             id="cost"
@@ -110,10 +108,10 @@ const PlaceOrders = () => {
                             required
                             readOnly
                             value={values.cost}
-                            onChange={handleInputChange}
                         />
                     </div>
                     <div className="form-group">
+                        <label htmlFor="product">Product</label>
                         <input
                             type="text"
                             id="product"
@@ -121,21 +119,20 @@ const PlaceOrders = () => {
                             readOnly
                             required
                             value={values.product}
-                            onChange={handleInputChange}
                         />
                     </div>
                     <div className="form-group">
-                        <input
-                            type="text"
+                        <label htmlFor="address">Address</label>
+                        <textarea
                             id="address"
                             name="address"
-                            placeholder="Address"
+                            placeholder="Enter your address"
                             required
                             onChange={handleInputChange}
                             value={values.address}
                         />
                     </div>
-                    <button className="submit" type="submit">Place Order</button>
+                    <button className="submit-btn" type="submit">Place Order</button>
                 </form>
             </div>
         </div>
