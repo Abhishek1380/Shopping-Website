@@ -1,105 +1,93 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import Button from './UI/Button.jsx';
+import CartContext from '../store/CartContext.jsx';
+import UserProgressContext from './UI/UserProgressContext.js';
 
-const base_url = process.env.Base_Url;
+const base_url = process.env.REACT_APP_BASE_URL;
 
 const Header = () => {
+    const cartCtx = useContext(CartContext);
+    const userProgressCtx = useContext(UserProgressContext);
 
+    const totalCartItems = cartCtx.items.reduce((totalNumberOfItems, item) => {
+        return totalNumberOfItems + item.quantity;
+    }, 0);
 
-    const [location, setLocation] = useState('test');
-    // const [resData, setResData] = useState('test');
+    function handleShowCart() {
+        userProgressCtx.showCart();
+    }
 
-    // useEffect(() => {
-    //     fetch(`${base_url}/location`, { method: 'GET' })
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             setLocation(data);
-    //             console.log(location);
-    //         })
-    // }, [])
-    // useEffect(() => {
-    //     fetch(`${base_url}/location`, { method: 'GET' })
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             setLocation(data);
-    //         })
-    //         .catch((error) => {
-    //             console.error('Error fetching data:', error);
-    //         });
-    // }, []);
+    const [location, setLocation] = useState([]);
+
+    useEffect(() => {
+        fetch(`${base_url}/location`, { method: 'GET' })
+            .then((res) => res.json())
+            .then((data) => {
+                setLocation(data);
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+            });
+    }, []);
 
     const renderItem = (data) => {
-        if (data) {
-            return data.map((item) => {
-                return (
-                    <option key={item.id} value={item.state_id}>
-                        {item.state}
-                    </option>
-                )
-            })
+        if (data.length > 0) {
+            return data.map((item) => (
+                <option key={item.id} value={item.state_id}>
+                    {item.state}
+                </option>
+            ));
         }
-    }
-    // const handleCity = (event) => {
-    //     console.log(event.target.value);
-    //     let state_id = event.target.value;
-    //     fetch(`${base_url}/resturant?stateId=${state_id}`, { method: 'GET' })
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             setResData(data);
-    //         })
-
-    // }
-
+        return null;
+    };
 
     return (
-        <>
-            <header className="Navbar">
-                <div className="Nav">
-                    <div className="Nav-1">
-                        <div className="Nav-1-1">
-                            <a href="#"><img src="https://i.ibb.co/G371csj/SubFile.png" alt="SubFile" border="0" /></a>
-                            <h6>Explore<span>Plus+</span></h6>
+        <header className="Navbar">
+            <div className="Nav">
+                <div className="Nav-1">
+                    <div className="Nav-1-1">
+                        <Link to="/">
+                            <img src="https://i.ibb.co/G371csj/SubFile.png" alt="SubFile" />
+                        </Link>
+                        <h6>Explore<span>Plus+</span></h6>
+                    </div>
+                </div>
+                <div className="Nav-2">
+                    <div className="search-input">
+                        <button className="fa fa-search"></button>
+                        <input type="text" placeholder="Search for products, brands and more" />
+                    </div>
+                </div>
+                <div className="Nav-3">
+                    <div>
+                        <div className="links">
+                            <Link to="/" className="fa fa-home icon-margin visible"></Link>
+                            <Link to="/">Home</Link>
                         </div>
                     </div>
-                    <div className="Nav-2">
-                        <div className="search-input">
-                            <button className="	fa fa-search"></button>
-                            <input type="text " placeholder="Search for products,brands and more" />
+                    <div>
+                        <div className="links">
+                            <Link to="/seller" className="fa fa-user-o icon-margin visible"></Link>
+                            <Link to="/seller">Seller</Link>
                         </div>
                     </div>
-                    <div className="Nav-3">
-                        <div>
-                            <div className="links">
-                                <a href="#" class="fa fa-home icon-margin visible"></a>
-                                <a href="#"> Home</a>
-                            </div>
-
+                    <div>
+                        <div className="links">
+                            <Link to="/cart" className="fa fa-shopping-cart icon-margin visible"></Link>
+                            <Button textOnly onClick={handleShowCart}>Cart({totalCartItems})</Button>
                         </div>
-                        <div>
-                            <div className="links">
-                                <a href="#" className="fa fa-user-o icon-margin visible"></a>
-                                <a href="#">Seller</a>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="links">
-                                <a href="#" class="fa fa-shopping-cart icon-margin visible"></a>
-                                <a href="#">Cart</a>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="links">
-                                <a href="#" className="fa fa-ellipsis-v"></a>
-
-                            </div>
-                            {/* <Link className="btn btn-info" to="/">Home</Link> */}
+                    </div>
+                    <div>
+                        <div className="links">
+                            <button className="fa fa-ellipsis-v"></button>
                         </div>
                     </div>
                 </div>
-            </header>
-        </>
-    )
+            </div>
+        </header>
+    );
 }
 
 export default Header;

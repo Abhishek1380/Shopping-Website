@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import './Listing.css';
 import ListingDisplay from './ListingDisplay';
 import axios from 'axios';
+
+
+import Button from '../UI/Button.jsx';
+import CartContext from '../../store/CartContext.jsx';
+
+
 
 const base_url = process.env.REACT_APP_BASE_URL;
 
@@ -10,6 +16,7 @@ const ListingLogic = () => {
     const params = useParams();
     const [restList, setRestList] = useState([]);
     const P_Id = params.p_id;
+    const cartCtx = useContext(CartContext);
 
     useEffect(() => {
         axios.get(`${base_url}/ProductList1/${P_Id}`)
@@ -24,10 +31,14 @@ const ListingLogic = () => {
 
     console.log('restList:', restList);
 
+    function handleAddMealToCart(item) {
+        cartCtx.addItem(item); // Dispatch the action to add the item to the cart
+    }
+
     return (
         <div className='row'>
             <div id="mainListing">
-                <ListingDisplay listData={restList} />
+                <ListingDisplay listData={restList} addToCart={handleAddMealToCart} />
             </div>
         </div>
     );

@@ -1,0 +1,97 @@
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.modal.cart {
+    /* Add specific styles for the cart modal if needed */
+}
+
+/* Modal close button */
+.modal .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Title inside the modal */
+.modal h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Cart items list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+/* Cart total styling */
+.cart-total {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Modal actions (buttons) */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-actions .button {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.modal-actions .button:first-child {
+    margin-left: 0;
+}
+
+.modal-actions .button:last-child {
+    margin-right: 0;
+}
+
+/* Button styling (textOnly and other variants) */
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.button.textOnly {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+}

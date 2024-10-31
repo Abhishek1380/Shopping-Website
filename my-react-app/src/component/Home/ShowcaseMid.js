@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ShowcaseMid.css';
 import QuickSearch1 from './QuickSearch1';
 import QuickSearch2 from './QuickSearch2';
@@ -7,12 +7,39 @@ import QuickSearch3 from './QuickSearch3';
 const ShowcaseMid = () => {
     const [couponVisible, setCouponVisible] = useState(true);
 
+    // Function to close the coupon
     const closeCoupon = () => {
         setCouponVisible(false);
     };
 
+    // Apply or remove blur effect on the body
+    useEffect(() => {
+        const body = document.body;
+        const coupon = document.getElementById('coupon');
+
+        if (couponVisible) {
+            body.classList.add('blur-background');
+            if (coupon) {
+                coupon.classList.add('unblur');
+            }
+        } else {
+            body.classList.remove('blur-background');
+            if (coupon) {
+                coupon.classList.remove('unblur');
+            }
+        }
+
+        // Cleanup function to remove blur effect when component unmounts
+        return () => {
+            body.classList.remove('blur-background');
+            if (coupon) {
+                coupon.classList.remove('unblur');
+            }
+        };
+    }, [couponVisible]);
+
     return (
-        <div className="showcase-mid height_so ">
+        <div className="showcase-mid height_so">
             <div className='box-wrapp'>
                 <div className='box-wrappp'>
                     <div id="demo" className="carousel slide" data-bs-ride="carousel">

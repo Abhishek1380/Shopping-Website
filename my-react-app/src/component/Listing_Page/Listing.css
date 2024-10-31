@@ -84,8 +84,8 @@ p {
 /* Class Cuisine */
 .cuisine {
     /* margin-left: 30%; */
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+
 }
 
 /* Filter Section */
@@ -122,7 +122,7 @@ h3 {
 .cuisine {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1rem 2rem;
     justify-content: center;
     padding: 1rem;
 }
