@@ -8,7 +8,7 @@ const base_url = process.env.REACT_APP_BASE_URL;
 
 const DetailLogic = () => {
     let params = useParams();
-    const [restDetails, setRestDetails] = useState(null); // Initialize as null
+    const [restDetails, setRestDetails] = useState(null);
     let ProductSpec_id = params.productSpec_id;
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const DetailLogic = () => {
         };
 
         fetchDetails();
-    }, [ProductSpec_id]); // Add productSpec_id as a dependency
+    }, [ProductSpec_id]);
 
     return (
         <>

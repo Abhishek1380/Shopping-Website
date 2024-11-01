@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const QuickDisplay1 = (props) => {
     const listMeal = ({ mealData }) => {
 
-        if (Array.isArray(mealData)) { // Check if mealData is an array
+        if (Array.isArray(mealData)) {
             return mealData.map((item) => {
 
                 return (
@@ -26,7 +26,7 @@ const QuickDisplay1 = (props) => {
 
 
         } else {
-            return null; // Return null or handle the case when mealData is not an array
+            return null;
         }
     };
 

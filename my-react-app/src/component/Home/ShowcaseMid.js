@@ -12,7 +12,7 @@ const ShowcaseMid = () => {
         setCouponVisible(false);
     };
 
-    // Apply or remove blur effect on the body
+
     useEffect(() => {
         const body = document.body;
         const coupon = document.getElementById('coupon');
@@ -29,7 +29,7 @@ const ShowcaseMid = () => {
             }
         }
 
-        // Cleanup function to remove blur effect when component unmounts
+
         return () => {
             body.classList.remove('blur-background');
             if (coupon) {
@@ -63,7 +63,7 @@ const ShowcaseMid = () => {
                                 </div>
                             </div>
                         )}
-                        {/* Indicators/dots */}
+
                         <div className="carousel-indicators">
                             <button type="button" data-bs-target="#demo" data-bs-slide-to="0" className="active"></button>
                             <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
@@ -71,10 +71,10 @@ const ShowcaseMid = () => {
                         </div>
 
                         <div className="carousel-inner">
-                            {/* ... carousel items */}
+
                         </div>
 
-                        {/* Left and right controls/icons */}
+
                         <button className="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
                             <span className="carousel-control-prev-icon"></span>
                         </button>

@@ -32,7 +32,7 @@ const ListingLogic = () => {
     console.log('restList:', restList);
 
     function handleAddMealToCart(item) {
-        cartCtx.addItem(item); // Dispatch the action to add the item to the cart
+        cartCtx.addItem(item);
     }
 
     return (

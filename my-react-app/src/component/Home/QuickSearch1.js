@@ -21,13 +21,7 @@ const QuickSearch1 = () => {
 
     return (
 
-
-
-
         <QuickDisplay1 mealData={mealType} />
-
-
-
 
     )
 }
