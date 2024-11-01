@@ -3,31 +3,24 @@ import './ShowcaseMid.css';
 import QuickDisplay3 from './QuickDisplay3';
 
 const base_url = process.env.REACT_APP_BASE_URL;
-const QuickSearch1 = () => {
 
-    const [mealType, setMealType] = useState();
+const QuickSearch3 = () => {
+    const [productData, setProductData] = useState();
 
     useEffect(() => {
         fetch(`${base_url}/ProductList3`, { method: 'GET' })
             .then((res) => res.json())
             .then((data) => {
-                setMealType(data);
+                setProductData(data);
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
             });
-    }, [])
+    }, []);
 
     return (
+        <QuickDisplay3 productData={productData} />
+    );
+};
 
-
-
-
-        <QuickDisplay3 mealData={mealType} />
-
-
-
-
-    )
-}
-export default QuickSearch1;
+export default QuickSearch3;

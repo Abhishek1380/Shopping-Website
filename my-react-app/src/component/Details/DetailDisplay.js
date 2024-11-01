@@ -5,6 +5,7 @@ import './detail.css';
 
 const base_url = process.env.REACT_APP_BASE_URL;
 
+
 const DetailDisplay = () => {
     let navigate = useNavigate();
     let [restDetails, setRestDetails] = useState(null);

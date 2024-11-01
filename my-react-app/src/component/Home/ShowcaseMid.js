@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './ShowcaseMid.css';
-import QuickSearch1 from './QuickSearch1';
-import QuickSearch2 from './QuickSearch2';
-import QuickSearch3 from './QuickSearch3';
+// import './ShowcaseMid.css';
+import QuickSearch1 from './HomeProductList/QuickSearch1';
+import QuickSearch2 from './HomeProductList/QuickSearch2';
+import QuickSearch3 from './HomeProductList/QuickSearch3';
 
 const ShowcaseMid = () => {
     const [couponVisible, setCouponVisible] = useState(true);
@@ -17,17 +17,17 @@ const ShowcaseMid = () => {
         const body = document.body;
         const coupon = document.getElementById('coupon');
 
-        if (couponVisible) {
-            body.classList.add('blur-background');
-            if (coupon) {
-                coupon.classList.add('unblur');
-            }
-        } else {
-            body.classList.remove('blur-background');
-            if (coupon) {
-                coupon.classList.remove('unblur');
-            }
-        }
+        // if (couponVisible) {
+        //     body.classList.add('blur-background');
+        //     if (coupon) {
+        //         coupon.classList.add('unblur');
+        //     }
+        // } else {
+        //     body.classList.remove('blur-background');
+        //     if (coupon) {
+        //         coupon.classList.remove('unblur');
+        //     }
+        // }
 
 
         return () => {

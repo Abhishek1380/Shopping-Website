@@ -1,47 +1,47 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-import Button from './UI/Button.jsx';
-import CartContext from '../store/CartContext.jsx';
-import UserProgressContext from './UI/UserProgressContext.js';
+// import Button from './UI/Button.jsx';
+// import CartContext from '../store/CartContext.jsx';
+// import UserProgressContext from './UI/UserProgressContext.js';
 
 const base_url = process.env.REACT_APP_BASE_URL;
 
 const Header = () => {
-    const cartCtx = useContext(CartContext);
-    const userProgressCtx = useContext(UserProgressContext);
+    // const cartCtx = useContext(CartContext);
+    // const userProgressCtx = useContext(UserProgressContext);
 
-    const totalCartItems = cartCtx.items.reduce((totalNumberOfItems, item) => {
-        return totalNumberOfItems + item.quantity;
-    }, 0);
+    // const totalCartItems = cartCtx.items.reduce((totalNumberOfItems, item) => {
+    //     return totalNumberOfItems + item.quantity;
+    // }, 0);
 
-    function handleShowCart() {
-        userProgressCtx.showCart();
-    }
+    // function handleShowCart() {
+    //     userProgressCtx.showCart();
+    // }
 
-    const [location, setLocation] = useState([]);
+    // const [location, setLocation] = useState([]);
 
-    useEffect(() => {
-        fetch(`${base_url}/location`, { method: 'GET' })
-            .then((res) => res.json())
-            .then((data) => {
-                setLocation(data);
-            })
-            .catch((error) => {
-                console.error('Error fetching data:', error);
-            });
-    }, []);
+    // useEffect(() => {
+    //     fetch(`${base_url}/location`, { method: 'GET' })
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             setLocation(data);
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error fetching data:', error);
+    //         });
+    // }, []);
 
-    const renderItem = (data) => {
-        if (data.length > 0) {
-            return data.map((item) => (
-                <option key={item.id} value={item.state_id}>
-                    {item.state}
-                </option>
-            ));
-        }
-        return null;
-    };
+    // const renderItem = (data) => {
+    //     if (data.length > 0) {
+    //         return data.map((item) => (
+    //             <option key={item.id} value={item.state_id}>
+    //                 {item.state}
+    //             </option>
+    //         ));
+    //     }
+    //     return null;
+    // };
 
     return (
         <header className="Navbar">
@@ -76,14 +76,15 @@ const Header = () => {
                     <div>
                         <div className="links">
                             <Link to="/cart" className="fa fa-shopping-cart icon-margin visible"></Link>
-                            <Button textOnly onClick={handleShowCart}>Cart({totalCartItems})</Button>
+                            {/* <Button textOnly onClick={handleShowCart}>Cart({totalCartItems})</Button> */}
+
                         </div>
                     </div>
-                    <div>
+                    {/* <div>
                         <div className="links">
                             <button className="fa fa-ellipsis-v"></button>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </header>
