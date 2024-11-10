@@ -22,7 +22,8 @@ This project is a full-stack shopping website built with the MERN stack (MongoDB
 ![Screenshot (756)](https://github.com/user-attachments/assets/9c6b1a57-9f51-47f3-b207-873750ff43ec)
 ![Screenshot (757)](https://github.com/user-attachments/assets/59658c79-6229-41fb-aafb-45a57757533a)
 ### Information Form
-![Screenshot (757)](https://github.com/user-attachments/assets/3fd8337c-c1f3-42e1-afca-6c6010225d20)
+![Screenshot (758)](https://github.com/user-attachments/assets/7ed9e3f7-7428-46f2-bab5-46a9e3838f71)
+
 ### Order details for admin
 ![Screenshot (759)](https://github.com/user-attachments/assets/6fb6682f-2f51-4f00-b07f-65a777667bcf)
 
@@ -79,5 +80,12 @@ This project is a full-stack shopping website built with the MERN stack (MongoDB
 - **Wishlist**: Allow users to save items for later.
 - **Product Reviews**: Enable users to review and rate products.
 - **Payment Gateway**: Integrate with a third-party payment provider.
+
+
+
+
+
+
+
 
 
